@@ -1,0 +1,207 @@
+/*
+  解决莫名其妙出现一个光标的问题
+*/
+p,
+span {
+  caret-color: transparent;
+}
+.Grid-layout {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+.antdcom {
+  overflow: hidden;
+}
+/*
+  antd button的样式 
+*/
+/* .ant-btn {
+  height: 100% !important;
+  width: 100%;
+  font-size: 15px !important;
+} */
+/*
+  遗留问题 字体如何自适应大小
+*/
+.antd-button-span {
+  /* height: 100%; */
+  text-align: center；;
+}
+/*
+  antd 输入框
+  对于带有 前置/后置标签 的input框来说  .ant-input-group的height !important是重要的
+*/
+.ant-input-affix-wrapper {
+  height: 100%;
+}
+.ant-input-group {
+  height: 100% !important;
+}
+.ant-input-group-wrapper {
+  height: 100%;
+}
+.ant-input {
+  height: 100%;
+}
+/*
+  选择框
+*/
+.ant-select-selector {
+  height: 100% !important;
+}
+.ant-select,
+.ant-select-single,
+.ant-select-show-arrow {
+  height: 100%;
+  width: 100%;
+}
+/*
+  改边距
+*/
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-left: 0px !important;
+}
+.antdcom {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/*
+  radio的样式
+*/
+.ant-space {
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+.ant-radio-group {
+  height: 100%;
+  width: 100%;
+}
+.ant-radio-button-wrapper {
+  height: 100% !important;
+  width: 25%;
+}
+
+/*
+  switch的样式 switch我理解应该不可变
+*/
+.switch-ant {
+  background: transparent;
+}
+/*
+  日期
+*/
+.ant-picker {
+  height: 100%;
+  width: 100%;
+}
+/*
+  card组件
+*/
+.card-ant {
+  overflow: auto;
+  background-color: rgb(243, 209, 209);
+}
+.ant-card {
+  height: 100%;
+  width: 100%;
+}
+.ant-card-body {
+  padding: 0px !important;
+}
+.myantcard {
+  overflow: auto;
+}
+
+/*
+  Image
+*/
+.ant-image-img {
+  height: 100% !important;
+}
+.ant-image {
+  height: 100%;
+  width: 100%;
+}
+/*
+  输入框的光标
+*/
+.ant-input-group {
+  caret-color: auto;
+}
+.table-ant {
+  overflow: auto;
+}
+.ant-card-body {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+/* 主div的伪类
+.antdcom:focus-within {
+  border: 0.5px inset #f5464e;
+}
+.antdcom:active {
+  border: 0.5px inset #f5464e;
+}
+card组件单独设置伪类
+.card-antd:focus-within {
+  border: 2px groove rgb(222, 247, 222);
+}
+.card-antd:focus-visible {
+  border: 2px groove rgb(222, 247, 222);
+}
+.card-antd:focus {
+  border: 2px groove rgb(222, 247, 222);
+}
+.card-antd:active {
+  border: 2px groove rgb(222, 247, 222);
+} */
+
+/* .react-grid-layout {
+  position: relative !important;
+  transition: height 2000ms ease !important;
+} */
+
+/*
+  调整默认的速率 默认是200ms
+*/
+.react-grid-item {
+  transition: all 100ms ease !important;
+}
+
+/*
+  antd 输入框
+  对于带有 前置/后置标签 的input框来说  .ant-input-group的height !important是重要的
+*/
+/* .ant-input-affix-wrapper {
+  height: 100%;
+}
+.ant-input-group {
+  height: 100% !important;
+}
+.ant-input-group-wrapper {
+  height: 100%;
+}
+.ant-input {
+  height: 100%;
+} */
+/*
+  选择框
+*/
+/* .ant-select-selector {
+  height: 100% !important;
+}
+.ant-select,
+.ant-select-single,
+.ant-select-show-arrow {
+  height: 100%;
+  width: 100%;
+} */

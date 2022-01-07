@@ -1,0 +1,15 @@
+/*
+  antd button的样式 
+*/
+.ant-btn {
+  height: 100% !important;
+  width: 100%;
+  font-size: 15px !important;
+}
+/*
+  遗留问题 字体如何自适应大小
+*/
+.antd-button-span {
+  /* height: 100%; */
+  text-align: center；;
+}
