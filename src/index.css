@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.react-grid-layout{
+  min-height: 864px;
+  background-color: rgb(102, 77, 77);
+}
+.divv{
+  height:100pt;
+  width:100pt;
+  background: #000;
+}
