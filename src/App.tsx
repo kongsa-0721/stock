@@ -27,7 +27,6 @@ function App() {
       <Ts8lazy></Ts8lazy>
       <Ts9lifing></Ts9lifing> */}
       <Gridlayout></Gridlayout>
-      <div className="divv"></div>
     </div>
   );
 }
