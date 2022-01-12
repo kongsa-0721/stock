@@ -1,4 +1,3 @@
-import Antdcomp from "./Antdcomp/index";
 import Ts1 from "./components/Ts1";
 import Ts2 from "./components/Ts2";
 import Ts3store from "./components/Ts3store";
