@@ -25,8 +25,8 @@ function App() {
       <Ts7context></Ts7context>
       <Ts8lazy></Ts8lazy>
       <Ts9lifing></Ts9lifing> */}
-      <Gridlayout></Gridlayout>
-      <div> this was a rebase</div>
+      {/* <Gridlayout></Gridlayout> */}
+      <Ts6Demo01></Ts6Demo01>
     </div>
   );
 }

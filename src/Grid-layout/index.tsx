@@ -47,7 +47,7 @@ interface Istate {
 const { Option } = Select;
 
 const Btnantd = styled(Button)`
-  .ant-btn{
+  .ant-btn {
     height: 100% !important;
     width: 100%;
     font-size: 15px !important;
@@ -302,8 +302,9 @@ export default class Gridlayout extends React.PureComponent<Iprops, Istate> {
           onDragStart={this.onDragStart}
           onDragStop={this.onDragStop}
           {...this.props}
-          compactType={"horizontal"}
+          // compactType={"horizontal"}
           verticalCompact={false}
+          // allowOverlap={true}
           autoSize={true}
           margin={[0, 0]}
         >
