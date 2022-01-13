@@ -9,6 +9,7 @@ import Ts7context from "./components/Ts7context";
 import Ts8lazy from "./components/Ts8lazy";
 import Ts9lifing from "./components/Ts9lifing";
 import Gridlayout from "./Grid-layout";
+import PopOver from "./AboutAntd/PopOver";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Ts9lifing></Ts9lifing> */}
       {/* <Gridlayout></Gridlayout> */}
       <Ts6Demo01></Ts6Demo01>
+      <PopOver></PopOver>
     </div>
   );
 }
