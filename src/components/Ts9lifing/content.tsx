@@ -1,12 +1,15 @@
 import React from "react";
 
 const Context = (props: any) => {
-  const arr = props.value.filter((val: string) => val !== "");
+  const { arr } = props;
+  const ownarr = arr.filter((item: string) => {
+    return item !== "";
+  });
   return (
     <div>
       <ul>
-        {arr.map((item: string, index: number) => {
-          return <li key={index}>{item}</li>;
+        {ownarr.map((item, key) => {
+          return <li key={key}>{item}</li>;
         })}
       </ul>
     </div>

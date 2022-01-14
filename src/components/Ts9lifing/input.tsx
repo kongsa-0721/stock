@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import { Input } from "antd";
+import styled from "styled-components";
 
+const MyInput = styled(Input)`
+  height: 30px;
+  width: 180px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  display: inline-block;
+`;
 const Inputval = (props: any) => {
-  const [val, setval] = useState("");
+  const { value, onsubmit } = props;
   const handlechange = (e: any) => {
-    setval(e.target.value);
-  };
-  const handlesubmit = () => {
-    props.onsubmit(val);
+    onsubmit(e.target.value);
   };
   return (
     <div>
-      <input onChange={handlechange} value={val} />
-      <button onClick={handlesubmit}>setvalue</button>
+      <MyInput onChange={handlechange} value={value} />
     </div>
   );
 };

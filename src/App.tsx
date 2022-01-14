@@ -29,6 +29,7 @@ function App() {
       {/* <Gridlayout></Gridlayout> */}
       <Ts6Demo01></Ts6Demo01>
       <PopOver></PopOver>
+      <Ts9lifing></Ts9lifing>
     </div>
   );
 }
