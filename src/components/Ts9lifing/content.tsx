@@ -1,8 +1,11 @@
 import React from "react";
 
-const Context = (props: any) => {
-  const { arr } = props;
-  const ownarr = arr.filter((item: string) => {
+const Context = () => {
+  let myarr = JSON.parse(localStorage.getItem("information"));
+  // if (myarr == null) {
+  //   myarr = JSON.parse(JSON.stringify([""]));
+  // }
+  const ownarr = myarr.filter((item: string) => {
     return item !== "";
   });
   return (

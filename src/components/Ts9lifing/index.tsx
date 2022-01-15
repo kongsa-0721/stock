@@ -11,13 +11,14 @@ const Ts9lifing = () => {
   const [arr, setarr] = useState([""]);
   const onSubmit = () => {
     setarr([...arr, value]);
+    localStorage.setItem("information", JSON.stringify(arr));
     setvalue("");
   };
   return (
     <>
       <Inputval onsubmit={onsubmit} value={value} />
       <Button onClick={onSubmit}>提交</Button>
-      <Contenet arr={arr} />
+      <Contenet />
     </>
   );
 };
