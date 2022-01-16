@@ -8,9 +8,13 @@ const MyInput = styled(Input)`
   border: 1px solid #ccc;
   display: inline-block;
 `;
-const Inputval = (props: any) => {
+interface Iprops {
+  value: string;
+  onsubmit: (val: string) => void;
+}
+const Inputval = (props: Iprops) => {
   const { value, onsubmit } = props;
-  const handlechange = (e: any) => {
+  const handlechange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onsubmit(e.target.value.toString());
   };
   return (
