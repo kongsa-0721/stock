@@ -8,7 +8,7 @@ const Tabs = (props: any) => {
       <div onClick={onChange}>{tabsConfig[0].title}</div>
       <div onClick={onChange}>{tabsConfig[1].title}</div>
       {tabsConfig.map((item, index) => {
-        return <>{}</>;
+        return <div key={index}>{}</div>;
       })}
       <div>{children[0]}</div>
       <div>{children[1]}</div>

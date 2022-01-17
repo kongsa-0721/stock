@@ -1,4 +1,5 @@
 import { Menu, Dropdown } from "antd";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 //表格内的小型下拉框
@@ -23,6 +24,8 @@ const DropdownLabel = styled.span`
 `;
 interface IConfig {
   label: string;
+  key: string;
+  onChange: (val: string) => void;
 }
 interface IDropDown {
   DropConfig: Array<IConfig>;
@@ -31,16 +34,22 @@ interface IDropDown {
   marginleft: string;
 }
 //下拉菜单默认的值
-const value = (props: Array<IConfig>) => {
+const value = (props: any, fn: any) => {
   return (
     <Menu>
       {props.map((item, index) => {
         return (
-          <>
-            <Menu.Item key={index}>
+          <React.Fragment key={index}>
+            <Menu.Item
+              onClick={() => {
+                item.onChange(item.key);
+                fn(item.label);
+              }}
+              key={item.key}
+            >
               <p>{item.label}</p>
             </Menu.Item>
-          </>
+          </React.Fragment>
         );
       })}
     </Menu>
@@ -48,16 +57,20 @@ const value = (props: Array<IConfig>) => {
 };
 export const DropDown = (props: IDropDown) => {
   const { label, width, marginleft, DropConfig } = props;
+  const [CurrentLabel, setCurrentLabel] = useState(label);
+  const ChangeLabel = (config: string) => {
+    setCurrentLabel(config);
+  };
   return (
     <>
       <MyDropdown
         width={width}
         marginleft={marginleft}
-        overlay={value(DropConfig)}
+        overlay={value(DropConfig, ChangeLabel)}
         trigger={["click"]}
       >
         <a onClick={(e) => e.preventDefault()}>
-          <DropdownLabel>{label}</DropdownLabel>
+          <DropdownLabel>{CurrentLabel}</DropdownLabel>
         </a>
       </MyDropdown>
     </>

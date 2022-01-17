@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Inputval from "./input";
 import Contenet from "./content";
-import { Button, Radio } from "antd";
+import { Button } from "antd";
 import { MyRadio } from "./Radio";
 
 const Ts9lifing = () => {
@@ -15,18 +15,22 @@ const Ts9lifing = () => {
     localStorage.setItem("information", JSON.stringify(arr));
     setvalue("");
   };
+  const handlechange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  };
   return (
     <>
       <Inputval onsubmit={onsubmit} value={value} />
       <Button onClick={onSubmit}>提交</Button>
       <Contenet />
       <MyRadio
+        ChangeFn={handlechange}
         radioConfig={[
-          { value: "1", label: "this" },
-          { value: "2", label: "is" },
-          { value: "3", label: "my" },
-          { value: "4", label: "little" },
-          { value: "5", label: "radio" },
+          { value: "3", label: "this" },
+          { value: "4", label: "is" },
+          { value: "5", label: "my" },
+          { value: "6", label: "little" },
+          { value: "7", label: "radio" },
         ]}
       />
     </>
