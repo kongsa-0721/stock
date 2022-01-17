@@ -15,13 +15,20 @@ const Ts9lifing = () => {
     localStorage.setItem("information", JSON.stringify(arr));
     setvalue("");
   };
-
   return (
     <>
       <Inputval onsubmit={onsubmit} value={value} />
       <Button onClick={onSubmit}>提交</Button>
       <Contenet />
-      <MyRadio />
+      <MyRadio
+        radioConfig={[
+          { value: "1", label: "this" },
+          { value: "2", label: "is" },
+          { value: "3", label: "my" },
+          { value: "4", label: "little" },
+          { value: "5", label: "radio" },
+        ]}
+      />
     </>
   );
 };

@@ -7,9 +7,11 @@ import Ts6Demo01 from "./components/Ts6router/Demo01";
 import Ts6Demo02 from "./components/Ts6router/Demo02";
 import Ts7context from "./components/Ts7context";
 import Ts8lazy from "./components/Ts8lazy";
-import Ts9lifing from "./components/Ts9lifing";
+import Ts9lifing from "./components/Ts9lifingAndRadio";
 import Gridlayout from "./Grid-layout";
 import PopOver from "./AboutAntd/PopOver";
+import Ts10Tabs from "./components/Ts10Tabs";
+import Ts11DropDown from "./components/Ts11Dropdown";
 
 function App() {
   return (
@@ -29,7 +31,9 @@ function App() {
       {/* <Gridlayout></Gridlayout> */}
       <Ts6Demo01></Ts6Demo01>
       <PopOver></PopOver>
-      <Ts9lifing></Ts9lifing>
+      <Ts9lifing />
+      <Ts10Tabs />
+      <Ts11DropDown />
     </div>
   );
 }
