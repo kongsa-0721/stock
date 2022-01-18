@@ -34,7 +34,7 @@ interface IDropDown {
   marginleft: string;
 }
 //下拉菜单默认的值
-const value = (props: any, fn: any) => {
+const value = (props: any) => {
   return (
     <Menu>
       {props.map((item, index) => {
@@ -43,7 +43,6 @@ const value = (props: any, fn: any) => {
             <Menu.Item
               onClick={() => {
                 item.onChange(item.key);
-                fn(item.label);
               }}
               key={item.key}
             >
@@ -57,20 +56,16 @@ const value = (props: any, fn: any) => {
 };
 export const DropDown = (props: IDropDown) => {
   const { label, width, marginleft, DropConfig } = props;
-  const [CurrentLabel, setCurrentLabel] = useState(label);
-  const ChangeLabel = (config: string) => {
-    setCurrentLabel(config);
-  };
   return (
     <>
       <MyDropdown
         width={width}
         marginleft={marginleft}
-        overlay={value(DropConfig, ChangeLabel)}
+        overlay={value(DropConfig)}
         trigger={["click"]}
       >
         <a onClick={(e) => e.preventDefault()}>
-          <DropdownLabel>{CurrentLabel}</DropdownLabel>
+          <DropdownLabel>{label}</DropdownLabel>
         </a>
       </MyDropdown>
     </>

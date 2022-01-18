@@ -4,6 +4,7 @@ import { Input, Button } from "antd";
 import { axiosGet } from "../../config/http/index";
 import "./css/index.css";
 import { putdataAction } from "./store/action";
+import { Dispatch } from "redux";
 
 const Form = (props: any) => {
   //网络请求
@@ -30,6 +31,14 @@ const Form = (props: any) => {
         loading: false,
       });
     }
+  };
+  //点击发送网络请求 把flag设置回去
+  const Send = () => {
+    setdatasour({
+      ...datasour,
+      loading: true,
+    });
+    getdata();
   };
   const [datasour, setdatasour] = useState<any>({
     datasource: {},
@@ -60,10 +69,13 @@ const Form = (props: any) => {
       <Button onClick={handlesubmit} size="large" type="ghost">
         submit
       </Button>
+      <Button onClick={Send} size="large" type="ghost">
+        发送网络请求
+      </Button>
     </div>
   );
 };
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
     putdata(data: any) {
       dispatch(putdataAction(data));

@@ -19,6 +19,11 @@ const List = (props: any) => {
           );
         })}
       </ul>
+      <ul>
+        <li>{props.datasource.name}</li>
+        <li>{props.datasource.age}</li>
+        <li>{props.datasource.msg}</li>
+      </ul>
     </div>
   );
 };
