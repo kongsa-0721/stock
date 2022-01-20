@@ -4,6 +4,9 @@ import styled from "styled-components";
 import Pack from "./icon-Pack-up.svg";
 
 const Container = styled.div`
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 8px;
   .ant-select:not(.ant-select-customize-input) .ant-select-selector {
     background: #fdfdfd;
     border: 1.07px solid #d7d9e0;
@@ -33,7 +36,7 @@ const SelectZ = (props: Iprops) => {
     ChangeItem(value, info);
   }
   return (
-    <div>
+    <>
       <Container>
         <Select
           defaultValue="sad"
@@ -54,7 +57,7 @@ const SelectZ = (props: Iprops) => {
         </Select>
       </Container>
       <img src={Pack} />
-    </div>
+    </>
   );
 };
 

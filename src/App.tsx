@@ -13,6 +13,7 @@ import PopOver from "./AboutAntd/PopOver";
 import Ts10Tabs from "./components/Ts10Tabs";
 import Ts11DropDown from "./components/Ts11Dropdown";
 import Ts12Select from "./components/Ts12Select";
+import StyleType from './components/Ts13Type'
 
 function App() {
   return (
@@ -30,12 +31,13 @@ function App() {
       <Ts8lazy></Ts8lazy>
       <Ts9lifing></Ts9lifing> */}
       {/* <Gridlayout></Gridlayout> */}
-      <Ts6Demo01></Ts6Demo01>
+      {/*<Ts6Demo01></Ts6Demo01>*/}
       <PopOver></PopOver>
       <Ts9lifing />
       {/* <Ts10Tabs /> */}
       <Ts11DropDown />
       <Ts12Select />
+      <StyleType/>
     </div>
   );
 }

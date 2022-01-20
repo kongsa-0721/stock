@@ -24,6 +24,7 @@ const Ts9lifing = () => {
       <Button onClick={onSubmit}>提交</Button>
       <Contenet />
       <MyRadio
+        // width={100}
         ChangeFn={handlechange}
         radioConfig={[
           { value: "3", label: "this" },

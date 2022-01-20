@@ -1,6 +1,7 @@
 {
   "name": "react-ts",
   "version": "0.0.0",
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
