@@ -27,3 +27,5 @@ function map<input, output>(
 }
 
 const parsed = map(["1", "2", "3"], (n) => parseInt(n));
+
+/*人生多么美妙*/
