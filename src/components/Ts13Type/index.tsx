@@ -21,7 +21,7 @@ const Dip = styled.div<App>`
     color: blanchedalmond;
   }
 `;
-const Thing = styled.div.attrs((/* props */) => ({ tabIndex: 0 }))`
+const Thing = styled.div.attrs(() => ({ tabIndex: 0 }))`
   width: 300px;
   color: red;
   background-color: pink;
@@ -46,21 +46,25 @@ const Thing = styled.div.attrs((/* props */) => ({ tabIndex: 0 }))`
     border: 1px solid pink; // <Thing> inside another element labeled ".something-else"
   }
 `;
-const Inoot = styled.input.attrs(() => ({ type: "checkbox" }))`
-  width: 20px;
-  height: 20px;
+interface ICheckbox {
+  width: number;
+  height: number;
+}
+const Inoot = styled.input.attrs(() => ({ type: "checkbox" }))<ICheckbox>`
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
 `;
 const StyledType = () => {
   return (
     <>
       <React.Fragment>
         <Thing>Hello world!</Thing>
-	<Thing>How ya doing?</Thing>
-	<Thing className="something">The sun is shining...</Thing>
+        <Thing>How ya doing?</Thing>
+        <Thing className="something">The sun is shining...</Thing>
         <div>Pretty nice day today.</div>
         <Thing>
-          Don't you think?Don't you think?Don't you think?Don't you think?Don't
-          you think?
+          Don't you think? Don't you think? Don't you think? Don't you think?
+          Don't you think?
         </Thing>
         <Thing>Don't you think?</Thing>
         <Thing>Don't you think?</Thing>
@@ -75,7 +79,7 @@ const StyledType = () => {
         <Thing>Don't you think?</Thing>
         <Thing>Don't you think?</Thing>
       </React.Fragment>
-      <Inoot />
+      <Inoot width={30} height={30} />
       <Dip app={"#C4B6DC"} marginleft={40}>
         往事只能回味
         <p>asdasdasd</p>
