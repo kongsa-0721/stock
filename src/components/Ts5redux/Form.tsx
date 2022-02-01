@@ -46,7 +46,7 @@ const Form = (props: any) => {
   });
   useEffect(() => {
     getdata();
-    //console.log(datasour.datasource);
+    console.log(datasour.datasource);
     props.putdata({ value, datasour });
   }, [datasour]);
   const [value, setvalue] = useState("");

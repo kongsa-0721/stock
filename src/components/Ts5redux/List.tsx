@@ -10,19 +10,24 @@ const List = (props: any) => {
   return (
     <div>
       <ul>
-        {props.list.map((item: string, index: number) => {
-          return (
-            <li key={index}>
-              {item}
-              <Button onClick={() => submit(item)}>delete</Button>
-            </li>
-          );
-        })}
+        {props.list &&
+          props.list.map((item: string, index: number) => {
+            return (
+              <li key={index}>
+                {item}
+                <Button onClick={() => submit(item)}>delete</Button>
+              </li>
+            );
+          })}
       </ul>
       <ul>
-        <li>{props.datasource.name}</li>
-        <li>{props.datasource.age}</li>
-        <li>{props.datasource.msg}</li>
+        {props.datasource && (
+          <>
+            <li>{props.datasource.name}</li>
+            <li>{props.datasource.age}</li>
+            <li>{props.datasource.msg}</li>
+          </>
+        )}
       </ul>
     </div>
   );

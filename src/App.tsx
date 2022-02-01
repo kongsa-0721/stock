@@ -15,6 +15,8 @@ import Ts11DropDown from "./components/Ts11Dropdown";
 import Ts12Select from "./components/Ts12Select";
 import StyleType from "./components/Ts13Type";
 import ChangeSvg from "./components/Ts14ChangeSvg";
+import DRAGCOMP from "./components/Ts15Com";
+import Demo01 from "./Request/Demo01";
 
 function App() {
   return (
@@ -39,7 +41,9 @@ function App() {
       <Ts11DropDown />
       <Ts12Select />
       <StyleType/> */}
-      <ChangeSvg />
+      {/* <ChangeSvg /> */}
+      <DRAGCOMP />
+      <Demo01 />
     </div>
   );
 }
