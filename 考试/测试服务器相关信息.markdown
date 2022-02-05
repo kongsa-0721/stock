@@ -1,0 +1,47 @@
+## SSH信息
+
+|    IP地址    | 端口 | 用户 |       密码       |
+| :-----------: | :--: | :--: | :--------------: |
+| 175.24.24.187 |  22  | root | 76R%z^07#BsJuxqA |
+
+示例：`ssh root@175.24.24.187`
+
+![图片.png](https://images.gitee.com/uploads/images/2021/0816/122712_98288c5e_472720.png)
+
+## 域名解析
+
+[175.24.24.187](http://175.24.24.187) → [yyw.usth.pubs.net.cn](http://yyw.usth.pubs.net.cn)
+
+[175.24.24.187](http://175.24.24.187) → [cwtest.usth.pubs.net.cn](http://cwtest.usth.pubs.net.cn)
+
+## 宝塔面板
+
+入口地址：[https://yyw.usth.pubs.net.cn:64888/7b690b90/](https://yyw.usth.pubs.net.cn:64888/7b690b90/)
+
+|   用户   |   密码   |
+| :------: | :------: |
+| 56oidasu | c5b6b6f7 |
+
+## 网站部署
+
+网站：[https://cwtest.usth.pubs.net.cn](https://cwtest.usth.pubs.net.cn)
+
+网站架构：`LNMT ( CentOS 7 + Nginx 1.20 + MySQL 5.6 + Tomcat )`
+
+FTP资料：
+
+|  用户  |       密码       |
+| :----: | :--------------: |
+| cwtest | RBaWx8tpGYnh3hXf |
+
+MySQL资料：
+
+| 数据库名 | 用户   | 密码             |
+| -------- | ------ | ---------------- |
+| cwtest   | cwtest | pB3jWitDzwNinNCf |
+
+Tomcat资料：
+
+|          War路径          |             备注             |
+| :------------------------: | :--------------------------: |
+| /www/server/tomcat/webapps | 尽量用面板上传以确保权限正确 |
