@@ -138,7 +138,7 @@ const Div = styled.div<Iprops>`
 
 | git命令                                                      | 对应的操作                                                   |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
-| git init                                                     | git初始化一下                                                |
+| git init                                                     | git初始化一下 (记得commit一次)                               |
 | git branch kongsa                                            | 创建本地分支kongsa                                           |
 | git checkout kongsa                                          | 本地切换到kongsa分支上去                                     |
 | git remote add **origin** https://gitee.com/rust_usth/dust.git | 链接远程仓库                                                 |
@@ -203,7 +203,7 @@ merge的全过程 git remote -v
 | cat ~/.ssh/id_rsa.pub                              | 复制ssh                            |
 | 粘贴到github                                       |                                    |
 | git push origin master:kongsa                      | 重新push一次 输入yes               |
-|                                                    |                                    |
+| cat ~/.gitconfig                                   | 查看个人信息                       |
 |                                                    |                                    |
 
 - 查看作者kongsa-0721 一共提交了多少行代码
@@ -318,7 +318,7 @@ sudo nginx -s stop
 | ls      | 列出目录下的所有文件 |
 | cd      | 进入文件夹           |
 | diff -c | 比较两个文件         |
-|         |                      |
+| cat     | 查看文件             |
 |         |                      |
 |         |                      |
 |         |                      |
