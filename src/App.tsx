@@ -42,9 +42,10 @@ function App() {
       <Ts12Select />
       <StyleType/> */}
       {/* <ChangeSvg /> */}
-      {/* <DRAGCOMP />
-      <Demo01 /> */}
       <RouterShow />
+      <hr />
+      <DRAGCOMP />
+      {/* <Demo01 /> */}
     </div>
   );
 }

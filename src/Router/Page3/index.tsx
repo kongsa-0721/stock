@@ -2,10 +2,11 @@ import ReactLazilyComponent from "react-lazily-component";
 import { Route, Redirect, Switch } from "react-router-dom";
 import styled from "styled-components";
 import MyLink from "../MyLink";
+import { Item1, Item2, Item3 } from "./Item";
 
-const Item1 = ReactLazilyComponent(() => import("./Item"));
-const Item2 = ReactLazilyComponent(() => import("./Item"));
-const Item3 = ReactLazilyComponent(() => import("./Item"));
+// const Item1 = ReactLazilyComponent(() => import("./Item"));
+// const Item2 = ReactLazilyComponent(() => import("./Item"));
+// const Item3 = ReactLazilyComponent(() => import("./Item"));
 const Page3Div = styled.div`
   width: 200px;
   height: 100px;

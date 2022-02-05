@@ -9,8 +9,8 @@ const Page2 = ReactLazilyComponent(() => import("./Page2"));
 const Page3 = ReactLazilyComponent(() => import("./Page3"));
 
 const ShowDiv = styled.div`
-  height: 150px;
-  width: 300px;
+  height: 123px;
+  width: 200px;
   background-color: #e7d5d5;
 `;
 
@@ -29,7 +29,6 @@ const RouterShow = () => {
           <Redirect to="/page1" />
         </Switch>
       </ShowDiv>
-      <div>this is a div</div>
     </BrowserRouter>
   );
 };

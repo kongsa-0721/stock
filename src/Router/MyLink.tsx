@@ -12,8 +12,8 @@ const MyLinkStyle = styled(NavLink)`
     color: green;
   }
   :hover {
-    color: #9797f5;
-    background-color: #f5f5f5;
+    color: #6b6baf;
+    background-color: #f3bcbc;
   }
 `;
 
