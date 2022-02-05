@@ -4,7 +4,6 @@ import Ts3store from "./components/Ts3store";
 import Ts4dux from "./components/Ts4dux";
 import Ts5redux from "./components/Ts5redux";
 import Ts6Demo01 from "./components/Ts6router/Demo01";
-import Ts6Demo02 from "./components/Ts6router/Demo02";
 import Ts7context from "./components/Ts7context";
 import Ts8lazy from "./components/Ts8lazy";
 import Ts9lifing from "./components/Ts9lifingAndRadio";
@@ -17,6 +16,7 @@ import StyleType from "./components/Ts13Type";
 import ChangeSvg from "./components/Ts14ChangeSvg";
 import DRAGCOMP from "./components/Ts15Com";
 import Demo01 from "./Request/Demo01";
+import RouterShow from "./Router";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
       <Ts8lazy></Ts8lazy>
       <Ts9lifing></Ts9lifing> */}
       {/* <Gridlayout></Gridlayout> */}
-      <Ts6Demo01></Ts6Demo01>
+      {/* <Ts6Demo01></Ts6Demo01> */}
       {/* <PopOver></PopOver>
       <Ts9lifing />
       <Ts10Tabs />
@@ -42,8 +42,9 @@ function App() {
       <Ts12Select />
       <StyleType/> */}
       {/* <ChangeSvg /> */}
-      <DRAGCOMP />
-      <Demo01 />
+      {/* <DRAGCOMP />
+      <Demo01 /> */}
+      <RouterShow />
     </div>
   );
 }
