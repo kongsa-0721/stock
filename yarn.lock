@@ -1430,6 +1430,11 @@ react-is@^17.0.2:
   resolved "https://registry.npmmirror.com/react-is/download/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
 
+react-lazily-component@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmmirror.com/react-lazily-component/-/react-lazily-component-0.2.0.tgz#40f484160b628e36ac129a1a5002e79c83ecf575"
+  integrity sha512-9gfy8kRjParjfaqZa9mMgmJVf1KSr0VL+SGif1jgjNJTW3n2RAppX0FlmzsI/c7Yz89attUtp3GuwZYhjcv44g==
+
 react-redux@^7.2.6:
   version "7.2.6"
   resolved "https://registry.npmmirror.com/react-redux/download/react-redux-7.2.6.tgz#49633a24fe552b5f9caf58feb8a138936ddfe9aa"

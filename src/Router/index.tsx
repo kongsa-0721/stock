@@ -1,9 +1,12 @@
-import Page1 from "./Page1";
-import Page2 from "./Page2";
-import Page3 from "./Page3";
+import ReactLazilyComponent from "react-lazily-component";
 import MyLink from "./MyLink";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import styled from "styled-components";
+// import Page1 from "./Page1";
+
+const Page1 = ReactLazilyComponent(() => import("./Page1"));
+const Page2 = ReactLazilyComponent(() => import("./Page2"));
+const Page3 = ReactLazilyComponent(() => import("./Page3"));
 
 const ShowDiv = styled.div`
   height: 150px;
