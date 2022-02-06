@@ -14,7 +14,7 @@ import Ts11DropDown from "./components/Ts11Dropdown";
 import Ts12Select from "./components/Ts12Select";
 import StyleType from "./components/Ts13Type";
 import ChangeSvg from "./components/Ts14ChangeSvg";
-import DRAGCOMP from "./components/Ts15Com";
+import DRAGCOMP from "./Ts15Com";
 import Demo01 from "./Request/Demo01";
 import RouterShow from "./Router";
 

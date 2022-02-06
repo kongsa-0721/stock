@@ -2,7 +2,7 @@ import { useRef } from "react";
 import styled from "styled-components";
 import { Button } from "antd";
 import SVG from "react-inlinesvg";
-import icon from "../Ts14ChangeSvg/icons/icon-7.svg";
+import icon from "../components/Ts14ChangeSvg/icons/icon-7.svg";
 
 //布局方面
 const Container = styled.div`
@@ -11,7 +11,7 @@ const Container = styled.div`
   background-color: aliceblue;
 `;
 const Left = styled.div`
-  width: calc(49% - 1px);
+  width: calc(48.7% - 1px);
   height: 100%;
   float: left;
 `;
@@ -23,7 +23,7 @@ const Drag = styled.div`
   cursor: ew-resize;
 `;
 const Right = styled.div`
-  width: 51%;
+  width: 51.3%;
   height: 100%;
   background-color: #b4e0e7;
   float: right;
@@ -54,15 +54,20 @@ const Span = styled.span`
 `;
 const TabDiv = styled.div`
   height: 43px;
-  width: 13.17%;
   background-color: #fff;
   text-align: center;
   display: inline-block;
+  flex: 0 0 ${26 / 4.08}%;
+  margin-left: 24px;
+  min-width: 10%;
+  max-width: 20%;
 `;
 const TabContainer = styled.div`
   height: 44px;
   width: 100%;
   border-bottom: 1px solid #e1e3eb;
+  display: flex;
+  align-items: center;
 `;
 //button
 const BUT = styled(Button)`
@@ -70,10 +75,13 @@ const BUT = styled(Button)`
   border: 1px solid #4965f2;
   border-radius: 4px;
   padding: 0;
-  width: 17%;
+  flex: 0 0 ${64 / 4.08}%;
   height: 24px;
   border: none;
-  margin-left: 23px;
+  margin-left: auto;
+  margin-right: 16px;
+  min-width: 10%;
+  max-width: 20%;
 `;
 const Icon = styled(SVG)`
   transform: translate(180deg);
