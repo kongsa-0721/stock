@@ -9,3 +9,4 @@ def wordCount(s):
 
 s = open('./test.sh').read()
 wordCount(s)
+#只能读取一个文件
