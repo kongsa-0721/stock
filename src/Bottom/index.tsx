@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { Button } from "antd";
 import SVG from "react-inlinesvg";
 import icon from "../components/Ts14ChangeSvg/icons/icon-7.svg";
+import { DropDown } from "./DropDown";
+import { Label } from "./Label";
+import TableShow from "./table";
+import { Notefi } from "./Notefi";
 
 //布局方面
 const Container = styled.div`
@@ -20,7 +24,23 @@ const Drag = styled.div`
   height: 100%;
   background-color: #e1e3eb;
   float: left;
+  position: relative;
   cursor: ew-resize;
+  ::before {
+    content: "";
+    position: absolute;
+    height: 284px;
+    width: 5px;
+    left: -4px;
+    cursor: ew-resize;
+  }
+  ::after {
+    content: "";
+    position: absolute;
+    height: 284px;
+    width: 5px;
+    cursor: ew-resize;
+  }
 `;
 const Right = styled.div`
   width: 51.3%;
@@ -46,15 +66,14 @@ const Span = styled.span`
     right: 0;
     bottom: 0px;
     height: 0;
-    border: 0.5px solid #06cc6b;
-    background-color: #06cc6b;
+
     border-radius: 2px;
   }
   user-select: none;
 `;
 const TabDiv = styled.div`
   height: 43px;
-  background-color: #fff;
+  background-color: #ffffff;
   text-align: center;
   display: inline-block;
   flex: 0 0 ${26 / 4.08}%;
@@ -83,15 +102,23 @@ const BUT = styled(Button)`
   min-width: 10%;
   max-width: 20%;
 `;
-const Icon = styled(SVG)`
-  transform: translate(180deg);
-`;
 const Buttonlabel = styled.span`
   font-family: PingFangSC-Medium;
   font-size: 13px;
   color: #ffffff;
   text-align: center;
   line-height: 24px;
+`;
+const Icon = styled(SVG)`
+  transform: translate(180deg);
+`;
+//内容区域
+const Content = styled.div`
+  width: 100%;
+  height: 239px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: bisque;
 `;
 const DRAGCOMP = () => {
   const contain = useRef(null);
@@ -140,10 +167,52 @@ const DRAGCOMP = () => {
               <Buttonlabel>运行</Buttonlabel>
             </BUT>
           </TabContainer>
+          <Content>
+            <TabContainer>
+              <div>
+                <Label text="1234" />
+              </div>
+              <DropDown
+                dropConfig={[
+                  { value: "first", key: "1" },
+                  { value: "second", key: "2" },
+                  { value: "third", key: "3" },
+                ]}
+                changeItem={(key, value) => {
+                  console.log(key, value);
+                }}
+              />
+            </TabContainer>
+            <TabContainer>
+              <DropDown
+                dropConfig={[
+                  { value: "first", key: "1" },
+                  { value: "second", key: "2" },
+                  { value: "third", key: "3" },
+                ]}
+                changeItem={(key, value) => {
+                  console.log(key, value);
+                }}
+                proportion={30}
+              />
+              <DropDown
+                dropConfig={[
+                  { value: "first", key: "1" },
+                  { value: "second", key: "2" },
+                  { value: "third", key: "3" },
+                ]}
+                changeItem={(key, value) => {
+                  console.log(key, value);
+                }}
+              />
+            </TabContainer>
+          </Content>
         </Left>
         <Drag ref={drag} onMouseDown={Move} />
-        <Right ref={right}></Right>
+        <Right id="er" ref={right}></Right>
       </Container>
+      <Notefi />
+      <TableShow />
     </>
   );
 };
