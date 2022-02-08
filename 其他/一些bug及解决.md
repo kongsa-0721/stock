@@ -159,7 +159,7 @@ const Div = styled.div<Iprops>`
 | git clean -d -fx                                             | 删除没有git add 的文件 慎用 除非这个分支里面的东西不重要     |
 | git push origin test:kongsa                                  | 就相当于在远程创建一个kongsa分支                             |
 | git checkout -b kongsasa                                     | 在本地创建一个分支kongsasa                                   |
-|                                                              |                                                              |
+| git branch --set-upstream-to=origin/master master            | 设置master对应远程的master 分支对应关系                      |
 
 可能每一次都需要pull一下然后再push 也可能是我修改了远程的库 不是同步的所以要pull一下
 
@@ -299,6 +299,16 @@ import {ReactComponent as ComLogo} from './logo.svg';
 ```
 
 这时候 ComLogo就相当于一个组件 直接单标签使用 能用单标签全用单标签
+
+- 在别的地方复制svg 
+
+右键 copy innerHtml 放入空白文件 在svg标签里面加入
+
+```html
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink"
+```
+
+命名空间
 
 ##### 服务器
 

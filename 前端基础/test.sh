@@ -12,4 +12,4 @@ for i in $files; do
   fi
 done
 
-echo '共计字数'$all
+echo '共计字数' $(($all-50000))
