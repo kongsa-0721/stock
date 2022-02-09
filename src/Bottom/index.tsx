@@ -5,7 +5,6 @@ import SVG from "react-inlinesvg";
 import icon from "../components/Ts14ChangeSvg/icons/icon-7.svg";
 import { DropDown } from "./DropDown";
 import { Label } from "./Label";
-import TableShow from "./table";
 import { Notefi } from "./Notefi";
 
 //布局方面
@@ -197,7 +196,10 @@ const DRAGCOMP = () => {
               />
               <DropDown
                 dropConfig={[
-                  { value: "first", key: "1" },
+                  {
+                    value: "firstttttttttttttttttfirsttttttttttttttttt",
+                    key: "1",
+                  },
                   { value: "second", key: "2" },
                   { value: "third", key: "3" },
                 ]}
@@ -212,7 +214,6 @@ const DRAGCOMP = () => {
         <Right id="er" ref={right}></Right>
       </Container>
       <Notefi />
-      <TableShow />
     </>
   );
 };

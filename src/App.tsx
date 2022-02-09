@@ -34,7 +34,7 @@ function App() {
       <Ts8lazy></Ts8lazy>
       <Ts9lifing></Ts9lifing> */}
       {/* <Gridlayout></Gridlayout> */}
-      {/* <Ts6Demo01></Ts6Demo01> */}
+      <Ts6Demo01></Ts6Demo01>
       {/* <PopOver></PopOver>
       <Ts9lifing />
       <Ts10Tabs />

@@ -30,6 +30,9 @@ const Container: any = styled.div<{ proportion: number }>`
     border-color: #d7d9e0 !important;
     box-shadow: none !important;
   }
+  .ant-select-single .ant-select-selector .ant-select-selection-item {
+    width: 32px;
+  }
 `;
 interface IConfig {
   value: string;
@@ -63,6 +66,7 @@ export const DropDown = (props: Iprops) => {
         defaultValue={dropConfig[0].value}
         onSelect={handleSelect}
         {...selectProps}
+        maxTagTextLength={30}
       >
         {dropConfig.map((item, index) => {
           return (
