@@ -37,7 +37,7 @@ set showmatch
 set ruler
 "去除vi的一致性
 set nocompatible
-"设置键盘映射，通过空格设置折叠
+"设置键盘映射,shift-z打开终端
 nnoremap <S-z>  <Esc>:bot term ++rows=14<CR>
 """"""""""""""""""""""""""""""""""""""""""""""
 "不要闪烁
