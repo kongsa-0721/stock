@@ -2,11 +2,50 @@
 
 ​                               	[穷则思变](https://stackoverflow.com/)
 
-##### 页面布局/渲染方面
+#### 页面布局/渲染方面
+
+- 大布局 下面的div覆盖上面的div但是不影响上面
+
+```css
+/*第一个 可以不设置absolute*/
+element.style {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    position: absolute;
+  	top: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+  	min-height: 100%;
+  	outline: none;
+  	user-select: text;
+  	overflow: hidden;
+}
+/*第二个*/
+element.style {
+    flex: 1 1 0%;
+    position: relative;
+    outline: none;
+}
+/*第三个*/
+element.style {
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    height: 300px;
+    z-index: 801;
+  	outline: none;
+}
+```
 
 - 注意z-index 
 
 尤其是在元素重叠显示的时候 加上z-index可能会导致后层元素的动作无法被触发
+
+- 扩充鼠标样式的范围
+
+使用伪元素扩充鼠标的样式 before after
 
 - 去除scale抖动
 
@@ -31,6 +70,21 @@
   word-wrap: break-word;
   word-break: break-all;
   white-space: pre-wrap;
+```
+
+- 文字超出部分显示···
+
+```css
+/*必须是块元素才能设置宽度 才可以使用*/
+overflow:hidden; /*超出的文本隐藏*/
+text-overflow:ellipsis; /*溢出用省略号显示*/
+white-space:nowrap; /*溢出不换行*/
+/*两行*/
+overflow: hidden;
+text-overflow: ellipsis;
+display:-webkit-box; /*作为弹性伸缩盒子模型显示*/
+-webkit-box-orient:vertical; /*设置伸缩盒子的子元素排列方式--从上到下垂直排列*/
+-webkit-line-clamp:2; /*显示的行*/
 ```
 
 - 常用的几个伪类
@@ -91,6 +145,8 @@ vertical-aligin解决 可以设置成为top
 
 3、不对齐原因是基线不对齐; 如果第一个div没有文字 加个字就可以
 
+4、可以使用flex布局 使用 justify-content:space-between
+
 - 关于行内块元素
 
 不可以设置float float会将元素设置为block 会出现4px的偏移
@@ -132,7 +188,7 @@ const Div = styled.div<Iprops>`
 
 ```
 
-##### Git 
+#### Git 
 
 - git gitlab 
 
@@ -204,7 +260,7 @@ merge的全过程 git remote -v
 | 粘贴到github                                       |                                    |
 | git push origin master:kongsa                      | 重新push一次 输入yes               |
 | cat ~/.gitconfig                                   | 查看个人信息                       |
-|                                                    |                                    |
+| git config --global http.sslVerify false           | 关闭ssh                            |
 
 - 查看作者kongsa-0721 一共提交了多少行代码
 
@@ -229,9 +285,9 @@ zhangqinyao     added lines: 826, removed lines: 50, total lines: 776				 93.94
 git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
 ```
 
-##### React/Ts
+#### React/Ts
 
-- vim 
+- ###### vim 
 
 返回目录
 
@@ -310,7 +366,7 @@ xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink"
 
 命名空间
 
-##### 服务器
+#### 服务器
 
 - 打开 关闭Nginx
 
@@ -318,7 +374,7 @@ sudo nginx
 
 sudo nginx -s stop
 
-##### 电脑使用方面
+#### 电脑使用方面
 
 - 常用的命令
 
@@ -409,11 +465,12 @@ nvm ls
        v14.17.6
 ```
 
+- 查看本机的环境变量
 
-
-
-
-
+```shell
+cat ~/.bash_profile
+本机的bash配置显示git分支 在 ~/.bashrc  里面
+```
 
 
 
