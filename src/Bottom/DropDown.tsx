@@ -1,6 +1,8 @@
 import React from "react";
 import { Select } from "antd";
 import styled from "styled-components";
+import icon from "../components/Ts14ChangeSvg/icons/icon-7.svg";
+import SVG from "react-inlinesvg";
 
 const Container: any = styled.div<{ proportion: number }>`
   display: inline-block !important;
@@ -30,9 +32,21 @@ const Container: any = styled.div<{ proportion: number }>`
     border-color: #d7d9e0 !important;
     box-shadow: none !important;
   }
+  //设置宽度 宽度不会溢出
   .ant-select-single .ant-select-selector .ant-select-selection-item {
     width: 32px;
   }
+`;
+const Icon = styled(SVG)`
+  transform: translate(180deg);
+  background-color: aqua;
+  display: block;
+`;
+const SelectDiv = styled.div`
+  /* background-color: red; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 interface IConfig {
   value: string;
@@ -67,12 +81,23 @@ export const DropDown = (props: Iprops) => {
         onSelect={handleSelect}
         {...selectProps}
         maxTagTextLength={30}
+        clearIcon={<Icon src={icon} />}
+        suffixIcon={
+          <div>
+            <Icon src={icon} />
+            <Icon src={icon} />
+          </div>
+        }
       >
         {dropConfig.map((item, index) => {
           return (
             <React.Fragment key={index}>
               <Option key={item.key} value={item.value}>
+                {/* <SelectDiv> */}
+                <Icon src={icon} />
                 {item.value}
+                <Icon src={icon} />
+                {/* </SelectDiv> */}
               </Option>
             </React.Fragment>
           );

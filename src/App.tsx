@@ -44,7 +44,10 @@ function App() {
       {/* <ChangeSvg /> */}
       <RouterShow />
       <hr />
-      <DRAGCOMP />
+      <DRAGCOMP>
+        <div>1111</div>
+        <div>222</div>
+      </DRAGCOMP>
       {/* <Demo01 /> */}
     </div>
   );

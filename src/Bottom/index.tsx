@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 import styled from "styled-components";
 import { Button } from "antd";
 import SVG from "react-inlinesvg";
@@ -119,7 +119,8 @@ const Content = styled.div`
   overflow-y: auto;
   background-color: bisque;
 `;
-const DRAGCOMP = () => {
+const DRAGCOMP = (props: { children: JSX.Element | string | ReactNode }) => {
+  const { children } = props;
   const contain = useRef(null);
   const left = useRef(null);
   const drag = useRef(null);
@@ -211,7 +212,10 @@ const DRAGCOMP = () => {
           </Content>
         </Left>
         <Drag ref={drag} onMouseDown={Move} />
-        <Right id="er" ref={right}></Right>
+        <Right id="er" ref={right}>
+          {children[0]}
+          {children[1]}
+        </Right>
       </Container>
       <Notefi />
     </>
