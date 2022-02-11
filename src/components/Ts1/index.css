@@ -1,6 +1,6 @@
 .cat{
     height: 500px;
     width:500px;
-    background-image: url(/assets//headimage.jpg);
+    background-image: url(/assets/headimage.jpg);
     background-size: contain;
 }

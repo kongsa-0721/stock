@@ -22,8 +22,8 @@ const Ts10Tabs = () => {
         ]}
         activeKey={"div1"}
       >
-        <ChildrenItem itemkey={"div1"}></ChildrenItem>
-        <ChildrenItem itemkey={"div2"}></ChildrenItem>
+        <ChildrenItem itemkey={"div1"}/>
+        <ChildrenItem itemkey={"div2"}/>
       </Tabs>
     </>
   );

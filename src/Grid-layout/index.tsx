@@ -205,7 +205,7 @@ export default class Gridlayout extends React.PureComponent<Iprops, Istate> {
       layout,
       linearstyles: {},
       mywidth: document.getElementsByClassName("Grid-layout")[0]
-        ?.clientWidth as number,
+        ?.clientWidth as number
     };
     this.onDragStart = this.onDragStart.bind(this);
     this.onDragStop = this.onDragStop.bind(this);
