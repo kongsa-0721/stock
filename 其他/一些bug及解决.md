@@ -201,7 +201,7 @@ const Div = styled.div<Iprops>`
 | git remote -v                                                | 查看远程链接地址的一些信息                                   |
 | git branch -a                                                | 查看所有(本地 远程)分支                                      |
 | git pull **--rebase** **origin** test-maomao-0321            | 第一次拉取 mao mao分支                                       |
-| git push -u **origin** master:test-maomao-0321               | 第一次推送本地的分支去maomao                                 |
+| git push -u **origin** master:test-maomao-0321               | 第一次推送本地的分支去maomao -u 确定push关系                 |
 | git push **origin** kongsa:kongsasa                          | 把本地分支推送到远程kongsasa上去 第二次就不用 -u             |
 | git push **origin** --delete kongsasa                        | 删除远程分支kongsasa                                         |
 | git push **origin** :kongsasa                                | 删除kongsasa 推送空的去kongsasa上 相当于删除                 |
@@ -215,7 +215,7 @@ const Div = styled.div<Iprops>`
 | git clean -d -fx                                             | 删除没有git add 的文件 慎用 除非这个分支里面的东西不重要     |
 | git push origin test:kongsa                                  | 就相当于在远程创建一个kongsa分支                             |
 | git checkout -b kongsasa                                     | 在本地创建一个分支kongsasa                                   |
-| git branch --set-upstream-to=origin/master master            | 设置master对应远程的master 分支对应关系                      |
+| git branch --set-upstream-to=origin/远程分支名  本地分支名   | 设置master对应远程的master 分支对应关系                      |
 
 可能每一次都需要pull一下然后再push 也可能是我修改了远程的库 不是同步的所以要pull一下
 
@@ -259,8 +259,12 @@ merge的全过程 git remote -v
 | cat ~/.ssh/id_rsa.pub                              | 复制ssh                            |
 | 粘贴到github                                       |                                    |
 | git push origin master:kongsa                      | 重新push一次 输入yes               |
-| cat ~/.gitconfig                                   | 查看个人信息                       |
+| cat ~/.gitconfig                                   | 查看个人信息/修改个人信息          |
 | git config --global http.sslVerify false           | 关闭ssh                            |
+| git log --pretty=format:"%an %ai %s "              | 在一行打印日志                     |
+|                                                    |                                    |
+|                                                    |                                    |
+|                                                    |                                    |
 
 - 查看作者kongsa-0721 一共提交了多少行代码
 
@@ -470,7 +474,21 @@ nvm ls
 ```shell
 cat ~/.bash_profile
 本机的bash配置显示git分支 在 ~/.bashrc  里面
+source ~/.bash_profile
+保存配置
 ```
 
+- vim
 
+| 命令 | 操作           |
+| ---- | -------------- |
+| gg   | 跳到文件第一行 |
+| G    | 文件末尾       |
+| bb   | 文件开头       |
+| nn   | 文件结尾       |
+| a    | 字之后插入     |
+| i    | 字之前插入     |
+|      |                |
+|      |                |
+|      |                |
 
