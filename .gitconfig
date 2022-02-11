@@ -1,0 +1,17 @@
+[user]
+    name = kongsa-0721
+    email = ks210220364@icloud.com
+[url "https://"]
+    insteadOf = git://  
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+[http]
+    sslVerify = false
+[alias]
+    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    st = status
+    aa = add .
+    pl = pull --rebase
