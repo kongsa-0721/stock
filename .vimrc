@@ -16,6 +16,7 @@ set nobackup
 set confirm
 "鼠标可用
 set mouse=a
+
 "tab缩进
 set tabstop=4
 set shiftwidth=4
@@ -37,7 +38,7 @@ set showmatch
 set ruler
 "去除vi的一致性
 set nocompatible
-"设置键盘映射,shift-z打开终端
+"设置键盘映射，通过空格设置折叠
 nnoremap <S-z>  <Esc>:bot term ++rows=14<CR>
 """"""""""""""""""""""""""""""""""""""""""""""
 "不要闪烁
@@ -87,7 +88,8 @@ set guioptions-=m
 set guioptions-=T
 " 总是显示状态栏
 set laststatus=2
-" 禁止折行
+
+"禁止折行
 set nowrap
 
 " 设置状态栏主题风格
@@ -105,13 +107,13 @@ set encoding=utf-8
 "共享剪切板
 set clipboard=unnamed
 
-
-
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 
 " 替代 esc
 inoremap jj <Esc>`^
+map nn <Esc>$
+map bb <Esc>0
 map <C-f> :NERDTree<CR>
 map <C-g> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 25 
@@ -125,3 +127,5 @@ let NERDTreeDirArrows = 1
 
 set guifont=Monospace20
 set guifont=Monaco:h20
+
+set vb
