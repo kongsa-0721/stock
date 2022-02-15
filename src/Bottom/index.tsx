@@ -217,7 +217,7 @@ const DRAGCOMP = (props: { children: JSX.Element | string | ReactNode }) => {
           {children[1]}
         </Right>
       </Container>
-      <Notefi />
+      {/* <Notefi /> */}
     </>
   );
 };

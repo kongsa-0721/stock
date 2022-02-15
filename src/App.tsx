@@ -17,10 +17,11 @@ import ChangeSvg from "./components/Ts14ChangeSvg";
 import DRAGCOMP from "./Bottom";
 import Demo01 from "./Request/Demo01";
 import RouterShow from "./Router";
+import { BlueButton, RedButton } from "./AboutAntd/BigButton";
 
 function App() {
   return (
-    <div className="App">
+    <>
       {/* <Ts1 msg="kongsa">
         <p>this is a react chileren</p>
       </Ts1>
@@ -44,12 +45,14 @@ function App() {
       {/* <ChangeSvg /> */}
       <RouterShow />
       <hr />
-      <DRAGCOMP>
+      {/* <DRAGCOMP>
         <div>1111</div>
         <div>222</div>
-      </DRAGCOMP>
+      </DRAGCOMP> */}
       {/* <Demo01 /> */}
-    </div>
+      <BlueButton label="重置列表宽度" onClick={() => {}} />
+      <RedButton label="重置列表宽度" onClick={() => {}} />
+    </>
   );
 }
 
