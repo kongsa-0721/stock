@@ -18,6 +18,7 @@ import DRAGCOMP from "./Bottom";
 import Demo01 from "./Request/Demo01";
 import RouterShow from "./Router";
 import { BlueButton, RedButton } from "./AboutAntd/BigButton";
+import TsStyled from "./components/Ts15styled";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
       {/* <Demo01 /> */}
       <BlueButton label="重置列表宽度" onClick={() => {}} />
       <RedButton label="重置列表宽度" onClick={() => {}} />
+      <TsStyled />
     </>
   );
 }
