@@ -3,6 +3,10 @@
 ```ts
 const arr:Array<number|string> = [12,3,4,3];
 const arr1:(number|string)[] = [23,"2"];
+interface Iprops {
+  [index:number]:string
+}
+const arr2:Iprops = ["df"]
 ```
 
 定义函数

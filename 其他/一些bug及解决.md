@@ -34,7 +34,7 @@ element.style {
     flex: 0 0 auto;
     position: relative;
     height: 300px;
-    z-index: 801;
+    z-index: 80;
   	outline: none;
 }
 ```
@@ -42,6 +42,8 @@ element.style {
 - 注意z-index 
 
 尤其是在元素重叠显示的时候 加上z-index可能会导致后层元素的动作无法被触发
+
+注意外层元素的overflow属性 不要盲目在z-index上找错误!
 
 - 扩充鼠标样式的范围
 
@@ -256,14 +258,14 @@ merge的全过程 git remote -v
 | ls ~/.ssh                                          | 查看ssh是否存在                    |
 | rm -rf ~/.ssh                                      | 删除文件夹                         |
 | ssh-keygen -t rsa -b 4096 -C "这里是你的@邮箱账号" | 创建新的ssh                        |
-| cat ~/.ssh/id_rsa.pub                              | 复制ssh                            |
+| cat ~/.ssh/id_rsa.pub                              | **查看** 复制ssh                   |
 | 粘贴到github                                       |                                    |
 | git push origin master:kongsa                      | 重新push一次 输入yes               |
 | cat ~/.gitconfig                                   | 查看个人信息/修改个人信息          |
 | git config --global http.sslVerify false           | 关闭ssh                            |
 | git log --pretty=format:"%an %ai %s "              | 在一行打印日志                     |
-|                                                    |                                    |
-|                                                    |                                    |
+| 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           | to Img **token** in github         |
+| --allow-unrelated-histories                        | 允许合并                           |
 |                                                    |                                    |
 
 - 查看作者kongsa-0721 一共提交了多少行代码
@@ -290,17 +292,6 @@ git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
 ```
 
 #### React/Ts
-
-- ###### vim 
-
-返回目录
-
-```vim
-:Rex[plore]：返回到资源管理器vimdoc.sourceforge
-:Ex：打开资源管理器，但不一定是相同的。见vim.wikia
-:b#：返回到“先前编辑的缓冲区”。见vim.wikia
-Ctrl- O：跳回到先前（较旧）的位置，不一定是缓冲区。见vim.wikia
-```
 
 - moment 库
 
@@ -382,19 +373,17 @@ sudo nginx -s stop
 
 - 常用的命令
 
-| 命令    | 对应的操作           |
-| ------- | -------------------- |
-| pwd     | 查看当前的路径       |
-| ls      | 列出目录下的所有文件 |
-| cd      | 进入文件夹           |
-| diff -c | 比较两个文件         |
-| cat     | 查看文件             |
-|         |                      |
-|         |                      |
-|         |                      |
-|         |                      |
-
-
+| 命令                                  | 对应的操作           |
+| ------------------------------------- | -------------------- |
+| pwd                                   | 查看当前的路径       |
+| ls                                    | 列出目录下的所有文件 |
+| cd                                    | 进入文件夹           |
+| diff -c                               | 比较两个文件         |
+| cat                                   | 查看文件             |
+| sudo chmod -R 777 文件名              | 赋权                 |
+| ifconfig en0                          | 本机的IP地址         |
+| /usr/local/MySQL/bin/mysql -u root -p | 打开本机数据库 mysql |
+|                                       |                      |
 
 - 恢复mac垃圾桶的设置 之前垃圾桶不保存东西
 
@@ -455,8 +444,6 @@ npm list -g --depth 0
 /usr/local/Cellar/nvm/0.38.0/versions/node/v14.17.6/lib
 └── npm@6.14.15
 
-
-
 ```
 
 - 查看安装的node版本
@@ -478,7 +465,7 @@ source ~/.bash_profile
 保存配置
 ```
 
-- vim
+#### Vim
 
 | 命令 | 操作           |
 | ---- | -------------- |
@@ -492,3 +479,11 @@ source ~/.bash_profile
 |      |                |
 |      |                |
 
+返回目录
+
+```vim
+:Rex[plore]   ：返回到资源管理器vimdoc.sourceforge
+:Ex           ：打开资源管理器，但不一定是相同的。见vim.wikia
+:b#           ：返回到“先前编辑的缓冲区”。见vim.wikia
+Ctrl-O        ：跳回到先前（较旧）的位置，不一定是缓冲区。见vim.wikia
+```

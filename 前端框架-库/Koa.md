@@ -2,7 +2,7 @@
 
 初始化package.json
 
-nom init --yes
+npm init --yes
 
 安装一个全局的nodemon 
 
