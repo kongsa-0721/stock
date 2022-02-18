@@ -19,8 +19,9 @@ import Demo01 from "./Request/Demo01";
 import RouterShow from "./Router";
 import { BlueButton, RedButton } from "./AboutAntd/BigButton";
 import TsStyled from "./components/Ts15styled";
+import SelectedComps from "./design";
 
-function App() {
+function Apply() {
   return (
     <>
       {/* <Ts1 msg="kongsa">
@@ -57,5 +58,19 @@ function App() {
     </>
   );
 }
-
+function App() {
+  return (
+    <>
+      <SelectedComps
+        comps={["button1", "button2"]}
+        onChange={(item) => {
+          console.log(item);
+        }}
+        delete={() => {
+          console.log("123");
+        }}
+      />
+    </>
+  );
+}
 export default App;

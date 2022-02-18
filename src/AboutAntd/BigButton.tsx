@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const BigButtonStyle = styled.button`
+export const BigButtonStyle = styled.button`
   height: 30px;
   width: 280px;
   margin-top: 8px;

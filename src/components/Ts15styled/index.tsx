@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-const Div1 = styled.div`
-  background-color: aliceblue;
-  height: 300px;
-  width: 300px;
-`;
 const Div3 = styled.div`
   background-color: #2d6596;
   height: 300px;
@@ -22,9 +17,6 @@ const Div2 = styled.div`
   &:hover ~ ${Div3} {
     border: 10px solid black;
   }
-  &:hover + ${Div1} {
-    border: 10px solid black;
-  }
   &:hover + ${Div4} {
     border: 10px solid black;
   }
@@ -32,7 +24,18 @@ const Div2 = styled.div`
     border: 10px solid black;
   }
 `;
-
+const Div1 = styled.div`
+  background-color: aliceblue;
+  height: 300px;
+  width: 300px;
+  &:hover {
+    border: 2px solid saddlebrown;
+  }
+  &:hover${Div3} {
+    border: 10px solid black;
+  }
+`;
+/**同级的元素之间可以传导hover 父子组件也不可以 */
 const TsStyled = () => {
   return (
     <>
