@@ -194,11 +194,17 @@ server
 
 
 
+项目nginx配置跨域
 
-
-
-
-
+```
+location /api{
+​    include uwsgi_params;
+​    proxy_set_header  Host       $host;
+​    proxy_set_header  x-forwarded-for $remote_addr;
+​    proxy_set_header  X-Real-IP    $remote_addr;
+​    proxy_pass http://121.36.4.107:8080/Rust;
+   }
+```
 
 
 
