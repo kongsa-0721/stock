@@ -1,6 +1,5 @@
-import { Modal as AntdModal } from "antd";
+import { Modal as AntdModal, Button } from "antd";
 import { ModalFuncProps, ModalProps as AntdModalProps } from "antd/lib/modal";
-import { Button } from "antd";
 import { ReactNode } from "react";
 import styled from "styled-components";
 import SVG from "react-inlinesvg";
@@ -24,7 +23,7 @@ const ModalWrapper = styled.div<ModalWrapperProps>`
   display: flex;
   flex-direction: column;
   width: ${(props) => (props.width ? props.width : "368px")};
-  heigh: fix-content;
+  height: fix-content;
   background: #ffffff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -34,7 +33,7 @@ const ModalWrapper = styled.div<ModalWrapperProps>`
 
 const ModalHeaderWrapper = styled.div`
   display: flex;
-  align-item: center;
+  align-items: center;
 `;
 
 const ModalHeaderTitle = styled.div`
