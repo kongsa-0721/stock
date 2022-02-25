@@ -58,12 +58,7 @@ export const DropDown = (props: IDropDown) => {
   const { label, width, marginleft, DropConfig } = props;
   return (
     <>
-      <MyDropdown
-        width={width}
-        marginleft={marginleft}
-        overlay={value(DropConfig)}
-        trigger={["click"]}
-      >
+      <MyDropdown width={width} marginleft={marginleft} overlay={value(DropConfig)} trigger={["click"]} arrow={true}>
         <a onClick={(e) => e.preventDefault()}>
           <DropdownLabel>{label}</DropdownLabel>
         </a>

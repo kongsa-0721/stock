@@ -38,13 +38,7 @@ const SelectZ = (props: Iprops) => {
   return (
     <>
       <Container>
-        <Select
-          defaultValue="sad"
-          style={{ width: width }}
-          onSelect={handleSelect}
-          showArrow={false}
-          suffixIcon={Pack}
-        >
+        <Select defaultValue="sad" style={{ width: width }} onSelect={handleSelect} showArrow={true} suffixIcon={Pack}>
           {SelectConfig.map((item, index) => {
             return (
               <React.Fragment key={index}>

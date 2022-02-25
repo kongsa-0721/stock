@@ -35,6 +35,14 @@ const Div1 = styled.div`
     border: 10px solid black;
   }
 `;
+const Div5 = styled.div.attrs({ tabindex: 0 })`
+  height: 300px;
+  width: 300px;
+  background-color: aliceblue;
+  &:focus {
+    background-color: aqua;
+  }
+`;
 /**同级的元素之间可以传导hover 父子组件也不可以 */
 const TsStyled = () => {
   return (
@@ -44,6 +52,7 @@ const TsStyled = () => {
         <Div4></Div4>
       </Div1>
       <Div3></Div3>
+      <Div5>123213</Div5>
     </>
   );
 };

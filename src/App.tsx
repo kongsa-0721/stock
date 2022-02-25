@@ -54,7 +54,6 @@ function Apply() {
       {/* <Demo01 /> */}
       <BlueButton label="重置列表宽度" onClick={() => {}} />
       <RedButton label="重置列表宽度" onClick={() => {}} />
-      <TsStyled />
     </>
   );
 }
@@ -70,6 +69,7 @@ function App() {
           console.log("123");
         }}
       />
+      <Ts12Select />
     </>
   );
 }
