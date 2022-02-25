@@ -4,8 +4,20 @@
 
 #### 页面布局/渲染方面
 
+- 在鼠标移动的时候避免选中文字
+
+```tsx
+//鼠标移动过程中禁止选中文字
+var selection = window.getSelection();
+selection!.removeAllRanges();
+或者 css
+user-select : none;
+//打印一下选中的
+console.log(window.getSelection().toString());
+
+```
+
 - 大布局 下面的div覆盖上面的div但是不影响上面
-- 整理组件多选部分 小bug 做底部
 
 ```css
 /*第一个 可以不设置absolute*/
