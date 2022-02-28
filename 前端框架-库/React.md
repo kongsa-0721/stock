@@ -495,3 +495,13 @@ composeWithDevTools(applyMiddleware(thunk))
 
 
 
+## 初始化项目
+
+```bash
+yarn create react-app my-app --template typescript
+```
+
+使用上面的命令初始化一个typescript项目
+
+在gitee上初始化一个储存库 master设置为保护分支 只有管理员可以推代码/合并分支
+

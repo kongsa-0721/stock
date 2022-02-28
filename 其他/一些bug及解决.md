@@ -4,17 +4,33 @@
 
 #### 页面布局/渲染方面
 
+- 查看网页中的dom节点
+
+```tsx
+function countNodes(node) {
+  var count = 1;
+  if(node.hasChildNodes()) {
+  	var cnodes = node.childNodes;
+  	for(var i=0; i<cnodes.length; i++) {
+  		count = count + countNodes(cnodes.item(i))
+  	}
+  }
+  return count;
+}
+countNodes(document.body)
+```
+
+
 - 在鼠标移动的时候避免选中文字
 
 ```tsx
 //鼠标移动过程中禁止选中文字
 var selection = window.getSelection();
 selection!.removeAllRanges();
-或者 css
+或者 css 
 user-select : none;
 //打印一下选中的
 console.log(window.getSelection().toString());
-
 ```
 
 - 大布局 下面的div覆盖上面的div但是不影响上面
@@ -356,7 +372,7 @@ import logo from  './logo.svg';
 
 缺点在于不能在修改颜色，这里其实就是直接用 img 加载了 svg 文件
 
-方式 2 vite构建的项目可能不可以用
+方式 2 【vite构建的项目不可以用】
 
 ```tsx
 import {ReactComponent as ComLogo} from './logo.svg';
@@ -364,7 +380,7 @@ import {ReactComponent as ComLogo} from './logo.svg';
 
 这时候 ComLogo就相当于一个组件 直接单标签使用 能用单标签全用单标签
 
-- 在别的地方复制svg 
+- 在别的地方复制svg无法使用的问题
 
 右键 copy innerHtml 放入空白文件 在svg标签里面加入
 
@@ -500,3 +516,11 @@ source ~/.bash_profile
 :b#           ：返回到“先前编辑的缓冲区”。见vim.wikia
 Ctrl-O        ：跳回到先前（较旧）的位置，不一定是缓冲区。见vim.wikia
 ```
+
+
+
+目前花费 10675 预计 11200 
+
+保守预计收入6000 
+
+开学 47000 应该留45000  毕业应该有6 0000存款
