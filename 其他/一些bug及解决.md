@@ -310,6 +310,7 @@ lijiaqi 				added lines: 3191, removed lines: 2236, total lines: 955		 29.92
 tangmingqiu     added lines: 5454, removed lines: 1199, total lines: 4255    78.01
 zhangqinyao     added lines: 826, removed lines: 50, total lines: 776				 93.94
 
+added lines: 8183, removed lines: 4151, total lines: 4032  50%左右 0301日
 ```
 
 代码重构率达到了60%
@@ -524,3 +525,4 @@ Ctrl-O        ：跳回到先前（较旧）的位置，不一定是缓冲区。
 保守预计收入6000 
 
 开学 47000 应该留45000  毕业应该有6 0000存款
+
