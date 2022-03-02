@@ -4,6 +4,21 @@
 
 #### 页面布局/渲染方面
 
+- 打开标签页的两种方式
+
+ ```html
+原地跳转
+（1）a标签实现
+		<a href="https://www.baidu.com">旭东怪的博客</a>
+（2）window.location.href实现
+		window.location.href="https://www.baidu.com"; *未验证
+新标签页跳转
+（1）a标签实现
+		<a href="https://www.baidu.com" target="_blank">旭东怪的博客</a>
+（2）window.open()实现
+		window.open("https://www.baidu.com");
+ ```
+
 - 查看网页中的dom节点
 
 ```tsx
@@ -174,7 +189,7 @@ vertical-aligin解决 可以设置成为top
 
 2、两元素设置浮动
 
-3、不对齐原因是基线不对齐; 如果第一个div没有文字 加个字就可以
+3、不对齐原因是基线不对齐; 如果第一个div没有文字 加个字就可以 *未试验
 
 4、可以使用flex布局 使用 justify-content:space-between
 
@@ -182,7 +197,7 @@ vertical-aligin解决 可以设置成为top
 
 不可以设置float float会将元素设置为block 会出现4px的偏移
 
-- border-box 适配
+- border-box 适配 *styled 不需要加运营商前缀 它自己会处理
 
 ```css
 .antdcom {
@@ -295,6 +310,9 @@ merge的全过程 git remote -v
 | git log --pretty=format:"%an %ai %s "              | 在一行打印日志                     |
 | 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           | to Img **token** in github         |
 | --allow-unrelated-histories                        | 允许合并                           |
+| git stash                                          | 暂存现在的更改                     |
+| git stash pop/apply                                | 把现在的更改应用                   |
+|                                                    |                                    |
 |                                                    |                                    |
 
 - 查看作者kongsa-0721 一共提交了多少行代码
