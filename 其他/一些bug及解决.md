@@ -265,7 +265,7 @@ const Div = styled.div<Iprops>`
 
 可能每一次都需要pull一下然后再push 也可能是我修改了远程的库 不是同步的所以要pull一下
 
-merge的全过程 git remote -v
+merge的全过程   git remote -v
 
 ​							git add .
 
@@ -281,15 +281,7 @@ merge的全过程 git remote -v
 
 ​						    git add. => git commit -m =>git pull =>git add .=>git commit -m=>git push=>merge
 
-​							git pull 一下算了 然后提交一个新的分支进去 烦死了
-
-​							git pull --rebase origin master 
-
-​							拉取到最新的master分支 
-
-​							然后你再开辟一个新的分支 再提交merge
-
-​							我理解(提交完本地的更改之后)直接git pull --rebase -> 再git push 
+实际流程应该是  git stash => git pull --rebase =>git stash pop =>git add. =>git commit =>git push =>merge
 
 - git更换远程的源
 
@@ -312,6 +304,11 @@ merge的全过程 git remote -v
 | --allow-unrelated-histories                        | 允许合并                           |
 | git stash                                          | 暂存现在的更改                     |
 | git stash pop/apply                                | 把现在的更改应用                   |
+| git stash show -p stash@{0}                        | 查看stash的内容                    |
+| git stash clear                                    | 清除所有的stash                    |
+| git stash =>clear                                  | 清除你本地的更改 不想要的更改      |
+|                                                    |                                    |
+|                                                    |                                    |
 |                                                    |                                    |
 |                                                    |                                    |
 
