@@ -319,11 +319,12 @@ git log --author="kongsa-0721" --pretty=tformat: --numstat | awk '{ add += $1; s
 kongsa-0721     added lines: 5957, removed lines: 733, total lines: 5224     87.69
 //每个人的数量
 git log --format='%aN' | sort -u | while read name; do echo -en "$name\t"; git log --author="$name" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -; done
-hanshuai        added lines: 14279, removed lines: 2351, total lines: 11928  83.53
-kongsa  				added lines: 3969, removed lines: 2343, total lines: 1626		 40.96
-lijiaqi 				added lines: 3191, removed lines: 2236, total lines: 955		 29.92
-tangmingqiu     added lines: 5454, removed lines: 1199, total lines: 4255    78.01
-zhangqinyao     added lines: 826, removed lines: 50, total lines: 776				 93.94
+hanshuai        added lines: 23624, removed lines: 8108, total lines: 15516
+kongsa  				added lines: 8886, removed lines: 4522, total lines: 4364
+lijiaqi 				added lines: 9283, removed lines: 4902, total lines: 4381
+liuzixun        added lines: 117, removed lines: 0, total lines: 117
+tangmingqiu     added lines: 14739, removed lines: 5392, total lines: 9347
+zhangqinyao     added lines: 6512, removed lines: 3296, total lines: 3216
 
 added lines: 8183, removed lines: 4151, total lines: 4032  50%左右 0301日
 ```
@@ -535,7 +536,7 @@ Ctrl-O        ：跳回到先前（较旧）的位置，不一定是缓冲区。
 
 
 
-目前花费 10675 预计 11200 
+目前花费 10675 预计 11200 目前 11600
 
 保守预计收入6000 
 
