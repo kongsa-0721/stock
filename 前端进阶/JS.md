@@ -817,7 +817,7 @@ $(function () {
 ```js
 JSON.stringify() 将对象转化为JSON字符串
 
-JSON.parse() 将JSON字符串转化为对象
+JSON.parse() 		 将JSON字符串转化为对象
 
 //字符串必须符合JSON格式 键值必须用双引号
 ```

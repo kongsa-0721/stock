@@ -327,6 +327,7 @@ tangmingqiu     added lines: 14739, removed lines: 5392, total lines: 9347
 zhangqinyao     added lines: 6512, removed lines: 3296, total lines: 3216
 
 added lines: 8183, removed lines: 4151, total lines: 4032  50%左右 0301日
+added lines: 9231, removed lines: 4701, total lines: 4530  49%左右 0310日
 ```
 
 代码重构率达到了60%
@@ -409,11 +410,38 @@ xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink"
 
 #### 服务器
 
+- picgo使用
+
+github令牌 **无过期时间** 勾选repo
+
+`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`
+
 - 打开 关闭Nginx
 
-sudo nginx
+  ​	sudo nginx
 
-sudo nginx -s stop
+  ​	sudo nginx -s stop
+
+- JS获取ip地址
+
+```js
+function ajax(url, callback) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+  xhr.onload = function () {
+    if (this.status == 200) {
+      callback(this.response);
+    }
+  };
+  xhr.send();
+}
+//调用回调函数 获取到返回值并输出
+ajax("http://120.25.198.121:8081/user-0.0.1-SNAPSHOT/ijsGetIp", (data) => {
+  console.log(data);
+  console.log(Object.values(JSON.parse(data))[0]);
+});
+```
+
 
 #### 电脑使用方面
 
