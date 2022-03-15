@@ -1,8 +1,22 @@
 ### 遇到的一些问题 解决的方案及技巧
 
-​                               	[穷则思变](https://stackoverflow.com/)
+​                               	[StackOverFlow](https://stackoverflow.com/)
 
 #### 页面布局/渲染方面
+
+- JSON的显示方式 format
+
+```
+JSON.stringify() 将对象转化为JSON字符串
+
+JSON.parse() 		 将JSON字符串转化为对象
+
+字符串必须符合JSON格式 键值必须用双引号
+
+格式化 format JSON.stringfy(data,null," ");
+
+某些地方可能需要JSON字符串 stringfy一下
+```
 
 - 打开标签页的两种方式
 
@@ -412,7 +426,7 @@ xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink"
 
 - picgo使用
 
-github令牌 **无过期时间** 勾选repo
+ github令牌 **无过期时间** 勾选repo Pigco 2022/03/14
 
 `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`
 
