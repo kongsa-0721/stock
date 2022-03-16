@@ -20,6 +20,8 @@ import RouterShow from "./Router";
 import { BlueButton, RedButton } from "./AboutAntd/BigButton";
 import TsStyled from "./components/Ts15styled";
 import SelectedComps from "./design";
+import Test from "./Image";
+import { Rating } from "./Image/Rating";
 
 function Apply() {
   return (
@@ -47,17 +49,17 @@ function Apply() {
       {/* <ChangeSvg /> */}
       <RouterShow />
       <hr />
-      {/* <DRAGCOMP>
+      <DRAGCOMP>
         <div>1111</div>
         <div>222</div>
-      </DRAGCOMP> */}
-      {/* <Demo01 /> */}
+      </DRAGCOMP>
+      <Demo01 />
       <BlueButton label="重置列表宽度" onClick={() => {}} />
       <RedButton label="重置列表宽度" onClick={() => {}} />
     </>
   );
 }
-function App() {
+function Apply1() {
   return (
     <>
       <SelectedComps
@@ -70,6 +72,14 @@ function App() {
         }}
       />
       <Ts12Select />
+    </>
+  );
+}
+function App() {
+  return (
+    <>
+      <Test />
+      <Rating />
     </>
   );
 }

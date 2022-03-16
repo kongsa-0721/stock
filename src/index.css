@@ -23,3 +23,8 @@ code {
   min-height: 864px;
   background-color: rgb(102, 77, 77);
 }
+
+.simplebar-scrollbar:before {
+  background-color: red;
+  height: 40px;
+}
