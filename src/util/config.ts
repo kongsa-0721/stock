@@ -11,4 +11,4 @@ class ModuleConfig {
 
 const config = new ModuleConfig();
 
-export default config;
+export { config };

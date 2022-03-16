@@ -7,7 +7,7 @@ import bodyParser from "koa-bodyparser";
 //配置跨域
 import cors from "koa2-cors";
 //config
-import config from "./util/config";
+import { config } from "./util";
 //挂载app new一个实例
 const app = new koa();
 
