@@ -22,6 +22,8 @@ import TsStyled from "./components/Ts15styled";
 import SelectedComps from "./design";
 import Test from "./Image";
 import { Rating } from "./Image/Rating";
+import { SliderComp } from "./Image/slider";
+import { Load } from "./Image/loading";
 
 function Apply() {
   return (
@@ -80,6 +82,8 @@ function App() {
     <>
       <Test />
       <Rating />
+      <SliderComp />
+      {Load}
     </>
   );
 }
