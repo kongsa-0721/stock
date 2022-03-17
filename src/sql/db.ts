@@ -16,7 +16,7 @@ interface queryResult {
   error: any;
   msg: string;
 }
-export function query1(command: string, value?: Array<any>) {
+export function query(command: string, value?: Array<any>) {
   const result: queryResult = {
     state: 0,
     results: null,
@@ -55,19 +55,3 @@ export function query1(command: string, value?: Array<any>) {
     });
   });
 }
-
-function query(
-  sql: string | mysql.QueryOptions,
-  callback: (err: mysql.MysqlError, values: any) => void
-) {
-  pool.getConnection(function (
-    err: mysql.MysqlError,
-    connection: mysql.PoolConnection
-  ) {
-    connection.query(sql, function (err: mysql.MysqlError, values: any) {
-      callback(err, values);
-      connection.release();
-    });
-  });
-}
-export default query;

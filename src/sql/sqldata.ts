@@ -1,5 +1,4 @@
-import { query1 } from "./db";
-import query from "./db";
+import { query } from "./db";
 
 interface Iuser {
   id: string;
@@ -15,17 +14,12 @@ class Api {
   static Insert() {
     arr.map((val: Iuser) => {
       let sql = `insert into user values (null,'${val.username}','${val.password}','${val.phone}')`;
-      query(sql, (err, data) => {
-        if (err) {
-          throw err;
-        }
-        console.log(data);
-      });
+      query(sql);
     });
   }
   static async Login(username: string) {
     let sql = `select * from user where username = '${username}'`;
-    const res = await query1(sql);
+    const res = await query(sql);
     return res;
   }
 }
