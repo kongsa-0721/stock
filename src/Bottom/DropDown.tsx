@@ -13,25 +13,30 @@ const Container: any = styled.div<{ proportion: number }>`
   flex: 1 1 30%;
   flex-basis: ${(props) => props.proportion}%;
   /* flex-grow: ${(props) => (props.proportion ? 0 : 1)}; */
+
   .ant-select-arrow {
     top: 65%;
     right: 8px;
     transform: rotate(180deg);
   }
+
   .ant-select-item {
     background: #efeff1;
     background-color: #fdfdfd;
   }
+
   .ant-select:not(.ant-select-customize-input) .ant-select-selector {
     background: #fdfdfd;
     border: 1.07px solid #d7d9e0;
     border-radius: 4px;
   }
+
   .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
     .ant-select-selector {
     border-color: #d7d9e0 !important;
     box-shadow: none !important;
   }
+
   //设置宽度 宽度不会溢出
   .ant-select-single .ant-select-selector .ant-select-selection-item {
     width: 32px;
@@ -48,10 +53,12 @@ const SelectDiv = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
+
 interface IConfig {
   value: string;
   key: string | number;
 }
+
 interface Iprops {
   dropConfig: Array<IConfig>;
   changeItem: (
@@ -60,12 +67,15 @@ interface Iprops {
   ) => void;
   proportion?: number;
 }
+
 export const DropDown = (props: Iprops) => {
   const { Option } = Select;
   const { dropConfig, changeItem, proportion } = props;
+
   function handleSelect(value: any, info: any) {
     changeItem(value, info);
   }
+
   const selectProps = {
     style: {
       width: "100%",
