@@ -16,6 +16,7 @@ export const BigButtonStyle = styled.button`
   line-height: 13px;
   transition: all 0.4s ease;
   cursor: pointer;
+
   &:hover {
     color: #3377ff;
     border: 1px solid #c2d6ff;
@@ -36,6 +37,7 @@ const RedButtonStyle = styled(BigButtonStyle)`
   color: #f73131;
   border: 1px solid rgba(247, 49, 49, 0.2);
   background: rgba(247, 49, 49, 0.05);
+
   &:hover {
     color: #f73131c7;
     border: 1px solid rgba(247, 49, 49, 0.19);

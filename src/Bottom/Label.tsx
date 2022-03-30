@@ -6,12 +6,12 @@ const labelCss: any = css`
   font-size: 13px;
   color: #222222;
   line-height: 13px;
+
   :hover {
     cursor: default;
   }
 `;
-
-const LabelStyel = styled.span`
+const LabelStyle = styled.span`
   ${labelCss}
   display: inline-block;
   height: 32px;
@@ -19,5 +19,5 @@ const LabelStyel = styled.span`
 `;
 export const Label = (props: { text: string }) => {
   const { text } = props;
-  return <LabelStyel>{text}</LabelStyel>;
+  return <LabelStyle>{text}</LabelStyle>;
 };

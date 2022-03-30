@@ -17,14 +17,14 @@ import ChangeSvg from "./components/Ts14ChangeSvg";
 import DRAGCOMP from "./Bottom";
 import Demo01 from "./Request/Demo01";
 import RouterShow from "./Router";
-import {BlueButton, RedButton} from "./AboutAntd/BigButton";
+import { BlueButton, RedButton } from "./AboutAntd/BigButton";
 import TsStyled from "./components/Ts15styled";
 import SelectedComps from "./design";
 import Test from "./Image";
-import {Rating} from "./Image/Rating";
-import {SliderComp} from "./Image/slider";
-import {Load} from "./Image/loading";
-import {Colorful} from "./Image/Colorful";
+import { Rating } from "./Image/Rating";
+import { SliderComp } from "./Image/slider";
+import { Load } from "./Image/loading";
+import { Colorful } from "./Image/Colorful";
 import AppColor from "./Image/color";
 
 function Apply() {
@@ -87,7 +87,7 @@ function App() {
       <SliderComp />
       {Load}
       <Colorful /> */}
-      <AppColor/>
+      <AppColor />
     </>
   );
 }

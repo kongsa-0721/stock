@@ -29,12 +29,14 @@ const Comp = styled(BigButtonStyle)`
   background: #ffffff;
   border: 1.07px solid #d7d9e0;
   color: #333333;
+
   &:hover {
     font-family: PingFangSC-Medium;
     background: #fdfdfd;
     border: 1.07px solid #8b8fa3;
     color: #333333;
   }
+
   &:focus {
     font-family: PingFangSC-Medium;
     background: #fdfdfd;
@@ -48,11 +50,13 @@ const DelBtn = styled(BigButtonStyle)`
   color: #f73131;
   background: #fef4f4;
   border: 1px solid #fccdcd;
+
   &:hover {
     color: #f73131;
     background: #feecec;
     border: 1px solid #fccdcd;
   }
+
   &:focus {
     color: #f73131;
     background: #feecec;
@@ -106,7 +110,7 @@ const SelectedComps = (props: Iprops) => {
         showCancelButton={true}
         width="368px"
         children={<Tiptext>{"确定要删除选中的" + comps.length + "个组件？"}</Tiptext>}
-      ></CustomModal>
+      />
       <DelBtn
         onClick={() => {
           setvis(true);
