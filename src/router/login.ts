@@ -1,5 +1,5 @@
 import { Context } from "koa";
-import Router from "koa-router";
+import * as  Router from "koa-router";
 import Api from "../sql/sqldata";
 import { filterObj } from "../util";
 
@@ -16,15 +16,20 @@ login.post("/", async (ctx: Context) => {
     if (res.results.length > 0) {
       if (res.results[0].password === loginConfig.password) {
         ctx.body = {
-          data: filterObj(res.results[0], ["id", "username", "phone"]),
-          msg: "登录成功",
           code: 200,
+          msg: "登录成功",
+          data: filterObj(res.results[0], ["id", "username", "phone"]),
         };
       } else {
         ctx.body = { msg: "密码错误", code: "403" };
       }
     } else {
-      ctx.body = { msg: "账号不存在", code: "403", err: res.error };
+      ctx.body = {
+        msg: "账号不存在",
+        code: "403",
+        err: res.error,
+        config: loginConfig,
+      };
     }
   } else {
     ctx.body = { msg: "查询失败", code: "500" };

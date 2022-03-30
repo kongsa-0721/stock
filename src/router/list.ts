@@ -1,4 +1,4 @@
-import Router from "koa-router";
+import * as Router from "koa-router";
 import { Context, Next } from "koa";
 const list = new Router();
 

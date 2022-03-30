@@ -1,4 +1,4 @@
-import mysql from "mysql";
+import * as mysql from "mysql";
 import { config } from "../util";
 
 var pool = mysql.createPool({
@@ -25,13 +25,17 @@ export function query(command: string, value?: Array<any>) {
     msg: "",
   };
   return new Promise<queryResult>((resolve, reject) => {
-    pool.getConnection((error: any, connection) => {
+    pool.getConnection((error: mysql.MysqlError, connection) => {
       if (error) {
         result.error = error;
         result.msg = "数据库连接出错";
         resolve(result);
       } else {
-        const callback: mysql.queryCallback = (error: any, results, fields) => {
+        const callback: mysql.queryCallback | null = (
+          error: mysql.MysqlError | null,
+          results,
+          fields
+        ) => {
           connection.release();
           if (error) {
             result.error = error;

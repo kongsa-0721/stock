@@ -1,4 +1,4 @@
-import Router from "koa-router";
+import * as  Router from "koa-router";
 import list from "./list";
 import login from "./login";
 import { Context } from "koa";

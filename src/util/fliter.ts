@@ -1,4 +1,4 @@
-//对象过滤出想要的
+//对象过滤
 function filterObj(obj: any, arr: Array<any>): any {
   if (typeof obj !== "object" || !Array.isArray(arr)) {
     throw new Error("参数格式不正确");
