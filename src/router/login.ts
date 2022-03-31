@@ -1,5 +1,5 @@
 import { Context } from "koa";
-import * as  Router from "koa-router";
+import Router from "koa-router";
 import Api from "../sql/sqldata";
 import { filterObj } from "../util";
 
