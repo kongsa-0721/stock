@@ -2,18 +2,24 @@
 
 ​                               	[StackOverFlow](https://stackoverflow.com/)
 
-#### 页面布局/渲染方面
+#### JS
 
-- 设置z-index之后影响了后面元素的事件触发
-	
+- 判断是否有空格
 
-​       pointer-events: none; 
-
-元素永远不会成为鼠标事件的[target](https://developer.mozilla.org/en-US/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
-
-属性一般是给SVG用的 穿透过去 不触发自己本身的事件
-
-- 手机号截取显示 
+```js
+function lineFeed(str) {
+  const re = /\r/g;
+  const rn = /\n/g;
+  const rf = /\r\n/g;
+  if (re.test(str) || rn.test(str) || rf.test(str) || str.length > 16) {
+  console.log("退出 有回车 或者长度过长");
+  return true;
+  }
+  console.log("不退出 长度还不够");
+  return false;
+}
+```
+- 手机号截取显示 ****
 
  ```js
 const phone = "15246795875";
@@ -36,6 +42,18 @@ JSON.parse() 		 JSON字符串 => JSON对象
 
 某些地方可能需要JSON字符串 stringfy一下 例如localStorage formdata
 ```
+
+#### 页面布局/渲染方面
+
+- 设置z-index之后影响了后面元素的事件触发
+	
+
+​       pointer-events: none; 
+
+元素永远不会成为鼠标事件的[target](https://developer.mozilla.org/en-US/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
+
+属性一般是给SVG用的 穿透过去 不触发自己本身的事件
+
 
 - 打开标签页的两种方式
 
@@ -606,4 +624,6 @@ Ctrl-O        ：跳回到先前（较旧）的位置，不一定是缓冲区。
 保守预计收入6000 
 
 开学 47000 应该留45000  毕业应该有6 0000存款
+
+
 
