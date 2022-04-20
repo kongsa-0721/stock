@@ -26,6 +26,7 @@ import { SliderComp } from "./Image/slider";
 import { Load } from "./Image/loading";
 import { Colorful } from "./Image/Colorful";
 import AppColor from "./Image/color";
+import DiD from './AboutAntd/draw'
 
 function Apply() {
   return (
@@ -88,6 +89,7 @@ function App() {
       {Load}
       <Colorful /> */}
       <AppColor />
+      <DiD />
     </>
   );
 }

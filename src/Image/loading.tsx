@@ -32,15 +32,14 @@ const loadcss = css`
 const Load1 = styled.div`
   ${loadcss}
   background-image: linear-gradient(#0045ff, #0045ff),
-    linear-gradient(to left, #ffffff, #ffffff91);
+  linear-gradient(to left, #ffffff, #ffffff91);
 `;
 const Load2 = styled.div`
   ${loadcss}
   transform: translateY(-7px);
   background-image: linear-gradient(#0045ff, #0045ff),
-    linear-gradient(to right, #ffffffa3, #ffffff1a);
+  linear-gradient(to right, #ffffffa3, #ffffff1a);
 `;
-
 export const Load = (
   <ContainerX>
     <Container>

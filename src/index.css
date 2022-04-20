@@ -1,30 +1,31 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+	"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-.react-grid-layout {
-  min-height: 864px;
-  background-color: rgb(102, 77, 77);
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .react-grid-layout {
-  min-height: 864px;
-  background-color: rgb(102, 77, 77);
+	min-height: 864px;
+	background-color: rgb(102, 77, 77);
 }
 
 .react-grid-layout {
-  min-height: 864px;
-  background-color: rgb(102, 77, 77);
+	min-height: 864px;
+	background-color: rgb(102, 77, 77);
+}
+
+.react-grid-layout {
+	min-height: 864px;
+	background-color: rgb(102, 77, 77);
 }
 
 .simplebar-scrollbar:before {
-  background-color: red;
-  height: 40px;
+	background-color: red;
+	height: 40px;
 }
