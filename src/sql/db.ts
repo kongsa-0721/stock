@@ -9,7 +9,7 @@ var pool = mysql.createPool({
   password: config.db.password,
 });
 
-interface queryResult {
+export interface queryResult {
   state: number;
   results: any;
   fields: any;
