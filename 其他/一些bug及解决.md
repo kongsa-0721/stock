@@ -379,6 +379,7 @@ zhangqinyao     added lines: 6512, removed lines: 3296, total lines: 3216
 
 added lines: 8183, removed lines: 4151, total lines: 4032  50%左右 0301日
 added lines: 9231, removed lines: 4701, total lines: 4530  49%左右 0310日
+added lines: 12397, removed lines: 6400, total lines: 5997 51%左右 0415日
 ```
 
 代码重构率达到了60%
@@ -388,6 +389,10 @@ added lines: 9231, removed lines: 4701, total lines: 4530  49%左右 0310日
 ```
 git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
 ```
+
+- 拉取固定文件夹的内容
+
+![image-20220425101947880](/Users/macbookpro/Library/Application Support/typora-user-images/image-20220425101947880.png)
 
 #### React/Ts
 
