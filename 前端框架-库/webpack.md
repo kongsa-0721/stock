@@ -1,8 +1,77 @@
 # webpack
 
-#### 在项目中安装和配置webpack
+全局的安装/卸载webpack
+
+```shell
+npm install webpack webpack-cli --global
+npm uninstall webpack webpack-cli --global
+```
+
+如果需要打包一个文件夹 这个文件夹内需要有一个src文件夹 然后src内有index.js
+
+```shell
+npx webpack 
+去网上找这个webpack 但不下载到本地 适合只使用一次的包 否则要下载 然后再卸载 很麻烦
+打包出来一个dist文件夹
+```
+
+初始化一个ts+webpack
+
+```js
+yarn add webpack webpack-cli html-webpack-plugin
+yarn add typescript ts-loader 
+tsc --init 初始化一个 tsconfig.json文件 在里面配置一些ts的设置
+配置一下webpack 
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+module.exports = {
+  //输入路径文件 入口
+  entry: "./src/index.ts",
+  //出口的配置
+  output: {
+    //文件名字 路径
+    filename: "tab.js",
+    path: path.resolve(__dirname, "./dist"),
+    //打包的每一次都清除之前的缓存
+    // clean: true,
+  },
+  //打包的模式 production development none
+  mode: "development",
+  //源代码映射
+  devtool: "inline-source-map",
+  //插件 这是一个数组
+  plugins: [
+    new HtmlWebpackPlugin({
+      //以...为模版
+      template: "index.html",
+      //文件名字
+      filename: "ppx.html",
+      //js文件的位置  head body
+      inject: "body",
+    }),
+  ],
+  //自动解析文件的拓展
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+  },
+  //module 使用对应的loader
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        //排除这个文件夹
+        exclude: /node_modules/,
+      },
+    ],
+  },
+};
 
 ```
+
+#### 在项目中安装和配置webpack
+
+```shell
 npm install webpack webpack-cli -D
 ```
 
@@ -45,6 +114,13 @@ const path = require('path')
   },
 ```
 
+path是node内置的一个库
+
+```js
+path: path.resolve(__dirname, "./dist")
+__dirname 是当前的webpack.config.js所在的绝对路径 
+```
+
 ###### 这时我们需要安装插件来简化 html-webpacke-plugin
 
 ```js
@@ -75,16 +151,23 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 ###### 热更新
 
 ```js
-可以通过 --watch 来热更新
+可以通过 --watch 来热更新 例如 npx webpack --watch 
+这时 并没有起本地的端口 html文件是一个固定的路径 每次修改玩之后 都要刷新一下页面
 推荐使用webpack-dev-server
-npm i webpack-dev-server -D
-  //devserver 自动的热更新啦
-  devServer: {
-  //在dist文件夹下面
-    static: "./dist",
-  },
+npm i webpack-dev-server -D 
+    devServer: {
+      //需要热更新的目录 就是打包之后的文件夹
+      static: "./dist",
+      // gzip压缩
+      compress: true,
+      //主机
+      host: "localhost",
+      //端口号
+      port: 3777,
+    },
     
-    启动 npx webpack-dev-server
+启动 npx webpack-dev-server
+把打包之后的文件放到了内存里
 ```
 
  --inline --progress --config build/webpack.dev.conf.js

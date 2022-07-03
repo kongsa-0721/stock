@@ -45,6 +45,46 @@ JSON.parse() 		 JSON字符串 => JSON对象
 
 #### 页面布局/渲染方面
 
+- flex布局
+
+ flex-direction   在主轴上的排列方式 
+
+ flex-wrap         是否换行
+
+`flex-flow`属性是`flex-direction`属性和`flex-wrap`属性的简写形式，默认值为`row nowrap`。
+
+`justify-content`属性定义了项目在主轴上的对齐方式。
+
+`align-items`属性定义项目在交叉轴上如何对齐。
+
+`align-content`属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。****
+
+
+
+`order`属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+
+`flex-grow`属性定义项目的放大比例，默认为`0`，即如果存在剩余空间，也不放大。
+
+`flex-shrink`属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+
+`flex-basis`属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为`auto`，即项目的本来大小。
+
+`flex`属性是`flex-grow`, `flex-shrink` 和 `flex-basis`的简写，默认值为`0 1 auto`。后两个属性可选。
+
+
+
+ flex 简写 
+
+```
+flex : 1 1 0% 
+不管子元素自身宽度多少，让子元素等分父容器
+felx : 1 1 auto
+自身占位自动 父空间有剩余时 子元素等比扩大 父元素空间不足 子元素等比缩小
+flex : 0 0 auto
+占位自动 不会随着父元素放大活着缩小
+```
+
+
 - 设置z-index之后影响了后面元素的事件触发
 	
 
@@ -382,6 +422,42 @@ added lines: 9231, removed lines: 4701, total lines: 4530  49%左右 0310日
 added lines: 12397, removed lines: 6400, total lines: 5997 51%左右 0415日
 ```
 
+```bash
+//主工程 六千多行
+Last login: Thu May  5 14:36:32 on ttys001
+➜  init cd ..
+➜  Desktop cd company/taco-fe
+➜  taco-fe git:(0330) git log --author="kongsa-0721" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+added lines: 13110, removed lines: 6801, total lines: 6309
+➜  taco-fe git:(0330) git log --format='%aN' | sort -u | while read name; do echo -en "$name\t"; git log --author="$name" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -; done
+hanshuai	added lines: 27958, removed lines: 10477, total lines: 17481
+kongsa	added lines: 13110, removed lines: 6801, total lines: 6309
+kongsa-0721	added lines: 13110, removed lines: 6801, total lines: 6309
+libin	added lines: 1484, removed lines: 279, total lines: 1205
+lijiaqi	added lines: 19322, removed lines: 12190, total lines: 7132
+liuzixun	added lines: 255, removed lines: 29, total lines: 226
+tangmingqiu	added lines: 26884, removed lines: 12351, total lines: 14533
+zhangqinyao	added lines: 15833, removed lines: 8872, total lines: 6961
+➜  taco-fe git:(0330)
+
+//官网 2k
+Last login: Thu May  5 18:44:24 on ttys000
+➜  init cd ..
+➜  Desktop cd company/taco-home
+➜  taco-home git:(master) git log --author="kongsa-0721" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+added lines: 20357, removed lines: 1402, total lines: 18955
+➜  taco-home git:(master) git log --format='%aN' | sort -u | while read name; do echo -en "$name\t"; git log --author="$name" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -; done
+chengluo	added lines: 132, removed lines: 32, total lines: 100
+hanshuai	added lines: 20, removed lines: 0, total lines: 20
+jerry	added lines: 42290, removed lines: 23976, total lines: 18314
+kongsa	added lines: 20357, removed lines: 1402, total lines: 18955
+kongsa-0721	added lines: 20357, removed lines: 1402, total lines: 18955
+liuzixun	added lines: 25905, removed lines: 19150, total lines: 6755
+zhangqinyao	added lines: 507, removed lines: 107, total lines: 400
+➜  taco-home git:(master)
+
+```
+
 代码重构率达到了60%
 
 - 查看贡献前五名的作者
@@ -624,11 +700,11 @@ Ctrl-O        ：跳回到先前（较旧）的位置，不一定是缓冲区。
 
 
 
-目前花费 10675 预计 11200 目前 11600
+4.25 
 
-保守预计收入6000 
+3000 + 8300 + 2760 - 车费 - 300 = 5.12回家 的净利润 约 13000
 
-开学 47000 应该留45000  毕业应该有6 0000存款
+3000+ 18300 - 车费 -1500 = 6.12回家 的净利润 约 18000
 
 
 
