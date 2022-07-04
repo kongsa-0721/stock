@@ -112,6 +112,16 @@ const path = require('path')
     //每次更新完毕清理一下
     clean: true,
   },
+    
+如果有多个入口的话 entry需要改成键值对
+entry:{
+  index:'./src/index.js',
+  ppx:'./src/ppx.js'
+}
+output 也要做对应的修改
+output:{
+  filename:"[name].js"
+}
 ```
 
 path是node内置的一个库
@@ -165,60 +175,118 @@ npm i webpack-dev-server -D
       //端口号
       port: 3777,
     },
-    
+加载webpack 自带的插件 HotModuleReplacementPlugin
+    new webpack.HotModuleReplacementPlugin(),
 启动 npx webpack-dev-server
 把打包之后的文件放到了内存里
+启动项目=>编译=>bundleServer=>HMRRuntime=>生成了代码
+修改=>重新编译=>HMRServer=>HMRRuntime=>替换模块=>代码修改了
+使用的是websocket
+
+
+bundleServer 提供文件在浏览器的访问 开了个端口号
+HMRRuntime 注入到浏览器 更新文件的变化
+HMRServer 热更新的文件输入到运行时
 ```
 
- --inline --progress --config build/webpack.dev.conf.js
+###### 解析es6 与 ts
+
+```ts
+使用bable-loader 解析es6
+使用ts-loader 解析ts
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        //排除这个文件夹
+        exclude: /node_modules/,
+      },
+    ],
+  },
+    
+如果没有使用 Babel，首选 TypeScript 自带编译器（配合 ts-loader 使用）；
+如果项目中有 Babel，安装 @babel/preset-typescript，配合 tsc 做类型检查；
+两种编译器不要混用。
+```
+
+###### 解析css less
 
 ```js
-生成html-webpack-plugin预览界面
-npm install html-webpack-plugin -D
-npm uninstall html-webpack-plugin -D
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const htmlPlugin = new HtmlWebpackPlugin({
-  template :'./src/index.html',
-  filename :'index.html'
-})
+使用css-loader 解析css
+style-loader 将样式通过style标签插入到body中
+less-loader less=>css
+yarn add css-loader style-loader 
+yarn add less less-loader 
 
-webpack 运行vue组件的加载器
-npm i vue-loader -D
-npm uninstall vue-loader
-+ vue-loader@15.9.8
-
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-plugins:[htmlPlugin, new VueLoaderPlugin()]
-    module: {
-        rules: [
-            { test: /\.vue$/, loader: 'vue-loader' },
-            {test: /\.css$/, use:['style-loader','css-loader']}
-        ]
-    }
-css加载器
-npm i style-loader css-loader -D
-npm uninstall style-loader css-loader 
-+ css-loader@6.2.0
-+ style-loader@3.2.1
-{test: /\.css$/, use['style-loader','css-loader']}
-
-图片和字体文件
-npm i url-loader file-loader -D
-npm uninstall url-loader file-loader 
-+ url-loader@4.1.1
-+ file-loader@6.2.0
-{test: /\.jpg|jpeg|png|gif|bmp|ttf|eot|svg|woff|woff2$/, use:'url-loader?limit=16940'}
+module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+    
+最后使用style-loader 但是需要放在前面 loader 是链式调用的
+less 
+使用less-loader 
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader","less-loader"],
+      },
+    ],
+  },
+  
 ```
 
+###### 解析图片/字体
+
+```js
+file-loader 
+yarn add file-loader 
+
+  module: {
+    rules: [
+      {
+        test: /.(png|jpg|gif|jpeg)$/,
+        use: "file-loader",
+      },
+      {
+        test: /.(woff|woff2|eot|ttf|otf)$/,
+        use: "file-loader",
+      },
+    ],
+  },
+也可以使用url-loader 可以对小图片 小字体 自动的进行base64 的转换
+{
+  test: /.(png|jpg|gif|jpeg)$/,
+    use: [
+      {
+        loader: "url-loader",
+        options: {
+          limit: 10240,
+        },
+      },
+    ],
+},
+        limit 单位 字节
+ 小于10k的话 自动进行base64的转换
+```
+
+loader
+
+![image-20220704121630001](/Users/macbookpro/Library/Application Support/typora-user-images/image-20220704121630001.png)
 
 
 
 
 
+plugins
 
-
-
-
+![image-20220704121829010](/Users/macbookpro/Library/Application Support/typora-user-images/image-20220704121829010.png)
 
 
 
