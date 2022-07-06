@@ -97,7 +97,7 @@ module.export = {
 }
 ```
 
-###### 修改打包的入口和出口
+###### 修改入口和出口（代码分离）
 
 在webpack.config.js 中新增以下信息使用node 中的path 模块  获取绝对路径
 
@@ -113,7 +113,8 @@ const path = require('path')
     clean: true,
   },
     
-如果有多个入口的话 entry需要改成键值对
+如果有多个入口的话 entry需要改成键值对 
+//这种方法 不能很好的进行代码分离 有可能造成代码重复
 entry:{
   index:'./src/index.js',
   ppx:'./src/ppx.js'
@@ -122,6 +123,18 @@ output 也要做对应的修改
 output:{
   filename:"[name].js"
 }
+//配置dependOn 
+  entry: {
+    index: {
+      import: "./src/index.ts",
+      dependOn: "shared",
+    },
+    login: {
+      import: "./src/login.ts",
+      dependOn: "shared",
+    },
+    shared: "loadsh",
+  },xd
 ```
 
 path是node内置的一个库
@@ -165,6 +178,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 这时 并没有起本地的端口 html文件是一个固定的路径 每次修改玩之后 都要刷新一下页面
 推荐使用webpack-dev-server
 npm i webpack-dev-server -D 
+//新版本的并不会真的打出一个物理文件 只是在内存中而已 对应的html文件名 设置成index就好 直接就能打开了
     devServer: {
       //需要热更新的目录 就是打包之后的文件夹
       static: "./dist",
@@ -175,6 +189,7 @@ npm i webpack-dev-server -D
       //端口号
       port: 3777,
     },
+      //以下是旧版的 需要加载插件 
 加载webpack 自带的插件 HotModuleReplacementPlugin
     new webpack.HotModuleReplacementPlugin(),
 启动 npx webpack-dev-server
@@ -193,7 +208,7 @@ HMRServer 热更新的文件输入到运行时
 
 ```ts
 使用bable-loader 解析es6
-使用ts-loader 解析ts
+使用ts-loader 解析ts ts根据tsconfig.json 的配置进行编译 不需要bable 如果是es6 没有使用ts的 需要bable
   module: {
     rules: [
       {
