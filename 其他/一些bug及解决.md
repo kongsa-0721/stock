@@ -470,6 +470,10 @@ git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
 
 ![image-20220425101947880](/Users/macbookpro/Library/Application Support/typora-user-images/image-20220425101947880.png)
 
+- 新仓库 
+
+创建新的github密钥 然后添加.ssh/config文件  mini-pack用了id_rsa2
+
 #### React/Ts
 
 - moment 库

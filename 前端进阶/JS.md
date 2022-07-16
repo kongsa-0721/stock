@@ -1245,7 +1245,6 @@ console.log(son.arr);
 //这里的值改变了  只有引用值会改变 父类的值也改变了  是没有办法解决的
 console.log(daughter.arr);
 
-
 ```
 
 - ###### 构造函数强绑定继承。无法拿到原型链上的方法
@@ -1274,8 +1273,6 @@ console.log(daughter.arr);
   son1.arr.push(5)
   console.log(son1.arr);
   console.log(son2.arr);
-  
-
   
 ```
 
