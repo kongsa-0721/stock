@@ -18,8 +18,8 @@ set confirm
 set mouse=a
 
 "tab缩进
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 "文件自动检测外部更改
