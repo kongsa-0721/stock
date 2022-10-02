@@ -125,7 +125,7 @@ let g:NERDTreeHidden=0
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-set guifont=Monospace20
-set guifont=Monaco:h20
+set guifont=Monospace17
+set guifont=Monaco:h17
 
 set vb
