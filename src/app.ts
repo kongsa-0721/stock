@@ -8,6 +8,8 @@ import bodyParser from "koa-bodyparser";
 import cors from "koa2-cors";
 //config
 import { config } from "./util";
+//token验证
+import checkToken from "./util/checkToken";
 //挂载app new一个实例
 const app = new koa();
 
@@ -23,7 +25,8 @@ const wss = new WebSocket1.Server({
 WebSocketApi(wss);
 
 //配置路由
-app.use(cors());
+// app.use(cors());
+app.use(checkToken);
 app.use(bodyParser());
 app.use(router.routes()).use(router.allowedMethods());
 

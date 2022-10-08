@@ -2,6 +2,7 @@ import { Context } from "koa";
 import Router from "koa-router";
 import Api from "../sql/sqldata";
 import { filterObj } from "../util";
+import jwt from "jsonwebtoken";
 
 const login = new Router();
 
@@ -15,6 +16,16 @@ login.post("/", async (ctx: Context) => {
   if (res.state === 1) {
     if (res.results.length > 0) {
       if (res.results[0].password === loginConfig.password) {
+        let curTime = new Date().getTime();
+        let expiresTime = 1000 * 60 * 60 * 24 * 7;
+        let payload = {
+          time: curTime,
+          timeout: expiresTime,
+        };
+        let token = jwt.sign(payload, "user_login");
+        ctx.cookies.set("token", token, {
+          expires: new Date(curTime + expiresTime),
+        });
         ctx.body = {
           code: 200,
           msg: "登录成功",
