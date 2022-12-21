@@ -1,6 +1,9 @@
+[safe]
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-core
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-cask
 [user]
     name = kongsa-0721
-    email = ks210220364@icloud.com
+	email = ks020809@163.com
 [url "https://"]
     insteadOf = git://  
 [filter "lfs"]
