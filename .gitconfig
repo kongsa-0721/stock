@@ -2,8 +2,8 @@
 	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-core
 	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-cask
 [user]
-    name = kongsa-0721
-	email = ks020809@163.com
+	name = kongsa
+	email = kongsa@dipeak.com
 [url "https://"]
     insteadOf = git://  
 [filter "lfs"]
@@ -19,3 +19,5 @@
     aa = add .
     pl = pull --rebase
     cc = commit
+[core]
+	quotepath = false
