@@ -2,7 +2,7 @@
 	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-core
 	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-cask
 [user]
-	name = kongsa
+	name = Sa Kong
 	email = kongsa@dipeak.com
 [url "https://"]
     insteadOf = git://  
@@ -18,6 +18,11 @@
     st = status
     aa = add .
     pl = pull --rebase
+    pla = pull --rebase origin main
     cc = commit
+    ck = checkout
+    ckb = checkout -b
+    ba = branch -a
+    bv = branch -vv
 [core]
 	quotepath = false
