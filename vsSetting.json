@@ -1,14 +1,27 @@
 {
+	"editor.fontSize": 15,
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"editor.quickSuggestions": { "strings": "on" },
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"extensions.autoUpdate": "onlyEnabledExtensions",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"liveServer.settings.donotShowInfoMsg": true,
 	"tabnine.experimentalAutoImports": true,
+	"terminal.integrated.fontFamily": "Monaco",
+	"terminal.integrated.fontSize": 13,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Default Dark+",
 	//终端的颜色的配置
 	"workbench.colorCustomizations": {
-		"terminal.background": "#393b3d", //总的背景色
-		"terminal.foreground": "#ff5fbc", //local颜色
-		"terminal.ansiBrightCyan": "#f8bbbb", //端口号 文件夹名字
-		"terminal.ansiBrightGreen": "#1eff00", //分支颜色
-		"terminal.ansiBrightYellow": "#fffb00", //名字
-		"terminal.ansiCyan": "#a9f7ec", //vite颜色
-		"terminal.ansiGreen": "#64ff78", //running颜色
+		"terminal.background": "#393b3d", // 总的背景色
+		"terminal.foreground": "#ff5fbc", // local颜色
+		"terminal.ansiBrightCyan": "#f8bbbb", // 端口号 文件夹名字
+		"terminal.ansiBrightGreen": "#1eff00", // 分支颜色
+		"terminal.ansiBrightYellow": "#fffb00", // 名字
+		"terminal.ansiCyan": "#a9f7ec", // vite颜色
+		"terminal.ansiGreen": "#64ff78", // running颜色
 		"terminalCursor.background": "#D8D8D8",
 		"terminalCursor.foreground": "#D8D8D8",
 		"terminal.ansiBlack": "#181818",
@@ -23,11 +36,37 @@
 		"terminal.ansiWhite": "#31962e",
 		"terminal.ansiYellow": "#e7da22",
 		"terminal.integrated.letterSpacing": 0.1,
-		"terminal.integrated.fontSize": 30 //字体大小设置
+		"terminal.integrated.fontSize": 30 // 字体大小设置
 	},
-	"terminal.integrated.fontFamily": "Monaco",
-	"terminal.integrated.fontSize": 13,
-	//vim快捷键配置
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	// prettier
+	"prettier.printWidth": 120,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"prettier.semi": false,
+	"prettier.singleQuote": true,
+	"prettier.quoteProps": "as-needed",
+	"prettier.jsxSingleQuote": true,
+	"prettier.bracketSpacing": true,
+	"prettier.bracketSameLine": false,
+	"prettier.arrowParens": "always",
+	"prettier.requirePragma": false,
+	"prettier.insertPragma": false,
+	"prettier.proseWrap": "preserve",
+	"prettier.htmlWhitespaceSensitivity": "ignore",
+	"prettier.endOfLine": "lf",
+	"prettier.embeddedLanguageFormatting": "auto",
+	"prettier.trailingComma": "none",
+	// vim快捷键配置
 	"vim.normalModeKeyBindings": [
 		{
 			"before": ["H"],
@@ -54,47 +93,26 @@
 			"after": ["g", "_"]
 		}
 	],
-	"editor.fontSize": 15,
-	"[css]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
-	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.formatOnSave": true,
-	"prettier.printWidth": 120,
-	"workbench.iconTheme": "material-icon-theme",
-	"extensions.autoUpdate": "onlyEnabledExtensions",
-	"prettier.tabWidth": 4,
-	"prettier.useTabs": true,
-	"prettier.semi": false,
-	"prettier.singleQuote": true,
-	"prettier.quoteProps": "as-needed",
-	"prettier.jsxSingleQuote": true,
-	"prettier.bracketSpacing": true,
-	"prettier.jsxBracketSameLine": false,
-	"prettier.arrowParens": "always",
-	"prettier.requirePragma": false,
-	"prettier.insertPragma": false,
-	"prettier.proseWrap": "preserve",
-	"prettier.htmlWhitespaceSensitivity": "ignore",
-	"prettier.endOfLine": "lf",
-	"prettier.embeddedLanguageFormatting": "auto",
-	"prettier.trailingComma": "none",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"editor.tabSize": 2,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"workbench.colorTheme": "Default Dark+",
+	// 配置cSpell
+	"cSpell.userWords": [
+		"ahooks",
+		"arrowParens",
+		"axios",
+		"bytenode",
+		"clsx",
+		"dipeak",
+		"donot",
+		"echarts",
+		"esbenp",
+		"iconfont",
+		"immer",
+		"keyof",
+		"kongsa",
+		"Popconfirm",
+		"tabnine",
+		"tailwindcss"
+	],
 	// 配置tailwindCss
 	"tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
-	"files.associations": {
-		"*.css": "tailwindcss"
-	},
-	"editor.quickSuggestions": {
-		"strings": "on"
-	}
+	"files.associations": { "*.css": "tailwindcss" }
 }
