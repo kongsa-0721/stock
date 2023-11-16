@@ -5,7 +5,6 @@
 	"editor.quickSuggestions": { "strings": "on" },
 	"editor.unicodeHighlight.ambiguousCharacters": false,
 	"extensions.autoUpdate": "onlyEnabledExtensions",
-	"diffEditor.ignoreTrimWhitespace": false,
 	"liveServer.settings.donotShowInfoMsg": true,
 	"tabnine.experimentalAutoImports": true,
 	"terminal.integrated.fontFamily": "Monaco",
@@ -100,12 +99,14 @@
 		"axios",
 		"bytenode",
 		"clsx",
+		"datasource",
 		"dipeak",
 		"donot",
 		"echarts",
 		"esbenp",
 		"iconfont",
 		"immer",
+		"innodb",
 		"keyof",
 		"kongsa",
 		"Popconfirm",
@@ -114,5 +115,10 @@
 	],
 	// 配置tailwindCss
 	"tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
-	"files.associations": { "*.css": "tailwindcss" }
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"diffEditor.experimental.showMoves": true,
+	"diffEditor.renderSideBySide": false,
+	"diffEditor.ignoreTrimWhitespace": false
 }

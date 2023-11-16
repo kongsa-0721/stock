@@ -1,0 +1,18 @@
+Host github.com
+    HostName github.com
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+Host gitee.com
+    HostName gitee.com
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_ed25519
+Host gitlab.dipeak.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+Host aliyun
+     HostName   47.95.13.234
+     User root
+     Port 22
+     IdentityFile ~/.ssh/id_rsa_aliyun
