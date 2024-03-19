@@ -78,7 +78,6 @@ Plugin 'Raimondi/delimitMate'
 call vundle#end()
 filetype plugin indent on
 
-" 配色方案
 set background=dark
 colorscheme molokai
 "colorscheme molokai

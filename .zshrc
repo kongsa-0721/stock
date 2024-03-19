@@ -103,15 +103,15 @@ source $ZSH/oh-my-zsh.sh
 # nvm config
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-# export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
+# export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # git commit 中文乱码问题
-export LC_ALL=en_US.UTF-8
+export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
-#设置mysql 否则mysql not found
+#设置mysql 否则mysql not found 
 source ~/.bash_profile
 #应该是 webstorm的配置
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
@@ -130,11 +130,26 @@ export PATH=${PATH}:${M2_HOME}/bin
 # postgresql 的地址配置
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 
+#-----source active when change work-directory && has venv directory ---
+ set_python_venv() {
+   MYVENV=./venv
+   # when you cd into a folder that contains $MYVENV
+   [[ -d $MYVENV ]] && source $MYVENV/bin/activate > /dev/null 2>&1
+   # when you cd into a folder that doesn't
+   [[ ! -d $MYVENV ]] && deactivate > /dev/null 2>&1
+ }
+ autoload -U add-zsh-hook
+ add-zsh-hook chpwd set_python_venv
+
+ set_python_venv
+
 # 服务器相关的一些别名
 alias 14='ssh kongsa@192.168.110.14'
 alias 15='ssh kongsa1@192.168.110.15'
 alias 25='ssh kongsa@192.168.110.25'
 alias 26='ssh kongsa@192.168.110.26'
 alias 27='ssh kongsa@192.168.110.27'
+alias 51='ssh kongsa@192.168.111.51'
 alias japan='ssh root@38.47.110.105'
 alias hongkong='ssh root@156.251.179.204'
+

@@ -24,5 +24,6 @@
     ckb = checkout -b
     ba = branch -a
     bv = branch -vv
+    fe = fetch origin 
 [core]
 	quotepath = false
